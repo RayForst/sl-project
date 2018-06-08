@@ -1,0 +1,17 @@
+<header class="header">
+    <div class="center flex flex_start">
+        {% include "components/logo/_logo.twig" with { mod: ' logo--header' } %}
+
+        <div class="header__language">
+            {% include "components/language/_language.twig" %}
+        </div>
+
+        <button class="hamburger hamburger--slider" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        {% include "content-items/header-burger/_header-burger.twig" %}
+    </div>
+</header>

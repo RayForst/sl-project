@@ -1,0 +1,109 @@
+.contact-requisites {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  @include breakpadding();
+  min-width: 240px;
+
+  $that: &;
+
+  &__link-wrapper {
+    text-align: center;
+
+    @media #{$m_tablet} {
+      text-align: left;
+      padding-right: 20px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 36px;
+
+      @media #{$m_tablet} {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+
+    &--phone {
+      color: #4a90e2;
+    }
+
+    &--mail {
+      color: #e74e44;
+    }
+
+    &--whatsapp {
+      color: #25d366;
+    }
+
+    @media #{$m_tablet} {
+      align-items: center;
+      display: inline-flex;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 auto 10px auto;
+    min-width: 30px;
+
+    @media #{$m_tablet} {
+      display: inline-flex;
+      margin-bottom: 0;
+      margin-right: 13px;
+    }
+  }
+
+  &--header {
+    @media #{$m_tablet} {
+      #{$that}__icon {
+        display: flex;
+        margin-right: auto;
+        margin-bottom: 10px;
+      }
+
+      #{$that}__link {
+        display: inline-block;
+      }
+
+      #{$that}__link-wrapper {
+        text-align: center;
+      }
+    }
+
+    @media #{$m_desktop} {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      #{$that}__icon {
+        display: inline-flex;
+        margin-bottom: 0;
+        margin-right: 13px;
+      }
+      #{$that}__link {
+        display: inline-flex;
+      }
+      #{$that}__link-wrapper {
+        margin-bottom: 0;
+        border-right: solid 1px #eeeeee;
+        display: inline-flex;
+        flex-basis: 33%;
+        justify-content: center;
+        padding-left: 20px;
+      }
+    }
+  }
+  &--footer {
+    @media #{$m_desktop} {
+      flex-direction: column;
+    }
+  }
+}

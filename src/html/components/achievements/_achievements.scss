@@ -1,0 +1,38 @@
+.achievements {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @media #{$m_tablet} {
+    height: 100%;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    @media #{$m_tablet} {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 6px;
+
+    @media #{$m_tablet} {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__label,
+  &__subline {
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #17b98e;
+    text-transform: uppercase;
+  }
+
+  &__subline {
+    font-size: 0.75em;
+  }
+}

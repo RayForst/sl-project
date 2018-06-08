@@ -1,0 +1,33 @@
+<div class="header-burger">
+    <div class="header-burger__background">
+        <div class="header-burger__achievements header-burger__element">
+            {% include "components/achievements/_achievements.twig" %}
+        </div>
+        <div class="header-burger__navigation header-burger__element">
+            {% include "components/navigation/_navigation.twig" with {
+                        mod : ' navigation--header',
+                        data: [
+                            [
+                                {
+                                    name: 'News',
+                                    link: '/news.html'
+                                }, {
+                                    name: 'TOURS IN RIGA',
+                                    link: '/catalogue.html'
+                                }, {
+                                    name: 'TOURS OUTSIDE RIGA',
+                                    link: '/catalogue.html'
+                                }, {
+                                    name: 'SPECIAL OFFERS',
+                                    link: '/catalogue.html'
+                                }
+                            ]
+                        ]
+                    }
+                    only %}
+        </div>
+        <div class="header-burger__contacts header-burger__element">
+            {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--header' } only %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: normal;
+  src: url($path-fonts + "ProximaNova-Reg.woff2") format("woff2"),
+  url($path-fonts + "ProximaNova-Reg.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-style: italic;
+  font-weight: normal;
+  src: url($path-fonts + "ProximaNova-RegIt.woff2") format("woff2"),
+  url($path-fonts + "ProximaNova-RegIt.woff") format("woff");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: bold;
+  src: url($path-fonts + "ProximaNova-Bold.woff2") format("woff2"),
+  url($path-fonts + "ProximaNova-Bold.woff") format("woff");
+}
+

@@ -4,10 +4,6 @@ const  webpackStream = require('webpack-stream')
 module.exports = function (gulp, plugins, options) {
     let webpackPlugins = [
         new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common-chunk',
-            minChunks: 2
-        }),
         new webpack.ProvidePlugin({
             $: 'jquery',
             jquery: 'jquery',
@@ -33,9 +29,8 @@ module.exports = function (gulp, plugins, options) {
         plugins.webpack({
             entry: {
                 // Index
-                'index': __dirname + "/../src/js/index/index",
-                'profile': __dirname + "/../src/js/profile/profile"
-            },
+                'main': __dirname + "/../src/html/main"
+              },
             output: {
                 publicPath: options.dest,
                 filename: '[name].js'

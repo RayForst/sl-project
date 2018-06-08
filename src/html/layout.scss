@@ -1,0 +1,76 @@
+@import "normalize/import-now";
+@import "variables";
+@import "components/fonts/fonts";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "ProximaNova", sans-serif;
+  background-color: $c_soft-blue;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+
+  &.fixed {
+    overflow: hidden;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  flex: 1;
+}
+
+.center {
+  padding: 0 15px;
+  margin: auto;
+  width: 100%;
+
+  @media #{$m_tablet} {
+    padding: 0 40px;
+  }
+
+  @media #{$m_desktop} {
+    padding: 0 60px;
+    max-width: 1440px;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &_start {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &_end {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
+  &_center {
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+@import "components/logo/logo";
+@import "components/language/language";
+@import "components/contact-requisites/contact-requisites";
+@import "components/navigation/navigation";
+@import "components/partners/partners";
+@import "components/achievements/achievements";
+
+@import "components/buttons/buttons";
+
+@import "content-items/header/_header";
+@import "content-items/header-burger/_header-burger";
+@import "content-items/footer/_footer";

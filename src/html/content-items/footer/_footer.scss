@@ -1,0 +1,129 @@
+.footer {
+  background: $c_gray;
+  padding: 25px 0 70px 0;
+
+  @media #{$m_tablet} {
+    padding: 40px 0;
+  }
+
+  &__information {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    @media #{$m_tablet} {
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media #{$m_desktop} {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__navigation-list {
+    list-style-type: none;
+  }
+
+  &__copyright {
+    font-size: 9px;
+    line-height: 1.11em;
+    color: #4a4a4a;
+    margin-bottom: 40px;
+    margin-top: 25px;
+
+    @media #{$m_tablet} {
+      margin: 0;
+      margin-left: 14px;
+      font-size: 12px;
+      line-height: 1.67em;
+    }
+
+    @media #{$m_desktop} {
+      margin-top: 20px;
+
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+
+    @media #{$m_tablet} {
+      display: flex;
+      flex-direction: row;
+      width: auto;
+      order: 5;
+      flex-basis: 50%;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    @media #{$m_desktop} {
+      align-items: flex-start;
+      margin-right: auto;
+      @include breakpadding();
+      padding-left: 0;
+      margin-top: 0;
+      order: 0;
+      flex-basis: auto;
+      flex-direction: column;
+    }
+  }
+
+  &__language {
+    margin-bottom: 40px;
+
+    @media #{$m_tablet} {
+      justify-content: flex-end;
+      display: flex;
+      margin-bottom: 0;
+      order: 6;
+      flex-basis: 50%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    @media #{$m_desktop} {
+      margin-left: auto;
+      order: 1;
+      flex-basis: auto;
+      margin: 0;
+    }
+  }
+
+  &__requisites {
+    margin-bottom: 60px;
+
+    @media #{$m_tablet} {
+      margin-bottom: 0;
+      margin-left: auto;
+      order: 3;
+      justify-content: flex-end;
+      align-content: flex-end;
+    }
+
+    @media #{$m_desktop} {
+      margin-right: auto;
+      order: 0;
+      margin-left: 0;
+    }
+  }
+
+  &__navigation {
+    @include breakpadding();
+    margin-bottom: 70px;
+
+    @media #{$m_tablet} {
+      display: flex;
+      margin-right: auto;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}

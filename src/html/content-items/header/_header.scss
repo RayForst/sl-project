@@ -1,0 +1,31 @@
+.header {
+  background: #fff;
+  padding: 10px 0;
+  position: relative;
+
+  & > .center {
+    position: relative;
+    align-items: center;
+  }
+
+  @media #{$m_desktop} {
+    padding: 0;
+  }
+
+  &__language {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    display: inline-flex;
+
+    @media #{$m_desktop} {
+      top: 0;
+      left: auto;
+      right: 60px;
+      transform: translateX(0);
+      z-index: 2;
+      top: 20px;
+    }
+  }
+}

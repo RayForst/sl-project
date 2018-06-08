@@ -1,0 +1,80 @@
+.navigation {
+  $that: &;
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 65px;
+    }
+
+    @media #{$m_tablet} {
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      & + & {
+        margin-left: 19px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    color: $c_dark-blue;
+    font-weight: bold;
+    line-height: 1.56em;
+    text-decoration: none;
+
+    @media #{$m_desktop} {
+      font-size: 16px;
+      text-align: left;
+      line-height: 1.67em;
+    }
+
+    @media #{$m_desktop} {
+      font-size: 12px;
+    }
+  }
+
+  &__link-wrapper {
+    &:not(:last-of-type) {
+      margin-bottom: 1.56em;
+
+      @media #{$m_tablet} {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--header {
+    @media #{$m_desktop} {
+      width: 100%;
+      @include breakpadding();
+      #{$that}__list {
+        display: flex;
+        width: 100%;
+      }
+
+      #{$that}__link-wrapper {
+        margin-bottom: 0;
+        flex-basis: 25%;
+
+        &:not(:last-of-type) #{$that}__link {
+          border-right: solid 1px #eeeeee;
+        }
+      }
+
+      #{$that}__link {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 27px;
+        font-size: 14px;
+      }
+    }
+  }
+}

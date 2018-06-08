@@ -1,0 +1,126 @@
+.partners {
+  text-align: center;
+
+  @media #{$m_tablet} {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  &__label {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.17em;
+    letter-spacing: 2px;
+    color: $c_dark-gray;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+
+    @media #{$m_tablet} {
+      flex-basis: 100%;
+      line-height: 1.75em;
+      font-size: 14px;
+      justify-content: flex-start;
+
+      &:after {
+        content: "";
+        display: inline-flex;
+        background: $c_gray_2;
+        height: 2px;
+        flex: 1;
+        align-self: center;
+        margin-left: 70px;
+      }
+    }
+
+    @media #{$m_desktop} {
+      font-size: 16px;
+    }
+  }
+
+  &__label-inner {
+    @media #{$m_tablet} {
+      display: inline-flex;
+    }
+  }
+
+  &__item {
+    display: block;
+
+    &:not(:last-of-type) {
+      margin-bottom: 55px;
+    }
+
+    @media #{$m-tablet--only} {
+      display: inline-flex;
+      flex-basis: 27%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+
+      &:not(:first-of-type) {
+        justify-content: center;
+      }
+
+      // row start
+      &:first-of-type,
+      &:nth-of-type(4n + 4) + & {
+        justify-content: flex-start;
+        flex-basis: 23%;
+      }
+
+      // row end
+      &:nth-of-type(4n + 4) {
+        justify-content: flex-end;
+        flex-basis: 23%;
+      }
+
+      &:not(:nth-of-type(4n + 4)) {
+        border-right: solid 1px #e4e4e4;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
+    @media #{$m_desktop} {
+      display: inline-flex;
+      flex-basis: 22%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+
+      &:not(:first-of-type) {
+        justify-content: center;
+      }
+
+      // row start
+      &:first-of-type,
+      &:nth-of-type(5n + 5) + & {
+        justify-content: flex-start;
+        flex-basis: 17%;
+      }
+
+      // row end
+      &:nth-of-type(5n + 5) {
+        justify-content: flex-end;
+        flex-basis: 17%;
+      }
+
+      &:not(:nth-of-type(5n + 5)) {
+        border-right: solid 1px #e4e4e4;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+}

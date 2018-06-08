@@ -15,14 +15,14 @@ const CONFIG = {
 
 
 gulp.task('css', () => require('./gulp-tasks/css')(gulp, plugins, {
-    src: [CONFIG.src + "/css/**/*.scss"],
+    src: [CONFIG.src + "/html/**/*.scss"],
     dest: CONFIG.dest + "/css",
     isProd: CONFIG.isProd
 }));
 
 
 gulp.task('js', () => require('./gulp-tasks/js')(gulp, plugins, {
-    src: [CONFIG.src + "/js/**/*.js"],
+    src: [CONFIG.src + "/html/*.js"],
     dest: CONFIG.dest + "/js",
     isProd: CONFIG.isProd,
     watch: argv.watch
@@ -42,7 +42,7 @@ gulp.task('html', () => require('./gulp-tasks/html')(gulp, plugins, {
 
 
 gulp.task('images', () => require('./gulp-tasks/images')(gulp, plugins, {
-    src: CONFIG.src + "/assets/img/**/*.{jpg,jpeg,png,svg,gif}",
+    src: CONFIG.src + "/html/**/*.{jpg,jpeg,png,svg,gif}",
     dest: CONFIG.dest + "/img"
 }));
 
@@ -54,7 +54,7 @@ gulp.task('video', () => require('./gulp-tasks/video')(gulp, plugins, {
 
 
 gulp.task('fonts', () => require('./gulp-tasks/fonts')(gulp, plugins, {
-    src: CONFIG.src + "/assets/fonts/**/*.{ttf,otf,woff,woff2}",
+    src: CONFIG.src + "/html/**/*.{ttf,otf,woff,woff2}",
     dest: CONFIG.dest + "/fonts"
 }));
 
@@ -66,7 +66,7 @@ gulp.task('clean', () => require('./gulp-tasks/clean')(gulp, plugins, {
 
 gulp.task('watch', function() {
     if (argv.watch) {
-        gulp.watch(CONFIG.src + "/css/**/*.scss", gulp.series('css'));
+        gulp.watch(CONFIG.src + "/html/**/*.scss", gulp.series('css'));
         gulp.watch(CONFIG.src + "/html/**/*.twig", gulp.series('html'));
     }
 });

@@ -1,0 +1,62 @@
+{% extends "_layout.twig" %}
+
+{% block title %}UI -
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <h1>Pages
+    </h1>
+
+    <ul>
+        <li>
+            <a href="/index.html">Main</a>
+        </li>
+        <li>
+            <a href="/catalogue.html">Tour catalogue</a>
+        </li>
+        <li>
+            <a href="/tour.html">Tour</a>
+        </li>
+        <li>
+            <a href="/news.html">News</a>
+        </li>
+        <li>
+            <a href="/news-article.html">News article</a>
+        </li>
+        <li>
+            <a href="/contacts.html">Contacts</a>
+        </li>
+    </ul>
+
+    <div class="component">
+        <h1>Buttons</h1>
+
+        <button class="sl-button">Button text</button>
+    </div>
+
+    <div class="component">
+        <h1>contact-requisites</h1>
+
+        <div class="mode">
+            <h2>
+                default</h2>
+
+            {% include "components/contact-requisites/_contact-requisites.twig" %}
+
+        </div>
+        <div class="mode">
+            <h2>--header</h2>
+
+            {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--header' } only %}
+
+        </div>
+
+        <div class="mode">
+            <h2>--footer</h2>
+            {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--footer' } only %}
+
+        </div>
+    </div>
+
+{% endblock %}

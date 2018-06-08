@@ -1,0 +1,22 @@
+.hamburger {
+  padding: 0;
+  right: 15px;
+  position: absolute;
+  height: 32px;
+  padding: 0 15px;
+  right: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.is-active {
+    z-index: 2000;
+  }
+
+  @media #{$m-desktop} {
+    display: none;
+
+    @import "components/fonts/fonts";
+  }
+}

@@ -1,28 +1,25 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Boilerplate">
-    <meta name="Keywords" content="Boilerplate">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/layout.css?v=4">
-    {% block css %}{% endblock %}
-    <title>Boilerplate</title>
-</head>
-<body>
-    <div class="content">
-        <h1>// DoubleFront boilerplate v0.1</h1>
+    <head>
+        {% include "content-items/meta/_meta.twig" %}
+        <link rel="stylesheet" href="css/layout.css">
+        <title>
+            {% block title %}Smile-line{% endblock %}
+        </title>
+    </head>
+    <body>
+        {% block header %}
+            {% include "content-items/header/_header.twig" %}
+        {% endblock %}
 
-        {% block content %}{% endblock %}
-    </div>
+        <div class="content center">
+            {% block content %}{% endblock %}
+        </div>
 
-    {% block footer %}
-        {% include "components/_footer.twig" %}
-    {% endblock %}
+        {% block footer %}
+            {% include "content-items/footer/_footer.twig" %}
+        {% endblock %}
 
-    <script src="js/common-chunk.js?v=4"></script>
-    {% block js %}{% endblock %}
-</body>
+        <script src="/js/main.js"></script>
+    </body>
 </html>

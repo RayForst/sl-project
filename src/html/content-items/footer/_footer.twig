@@ -1,0 +1,54 @@
+<footer class="footer">
+    <div class="center footer__information">
+        <div class="footer__logo">
+            {% include "components/logo/_logo.twig" with { mod : ' logo--footer' } only %}
+
+            <div class="footer__copyright">©SmileLine 2004 - 2018</div>
+        </div>
+
+        <div class="footer__language">
+            {% include "components/language/_language.twig" %}
+        </div>
+        <div class="footer__requisites">
+            {% include "components/contact-requisites/_contact-requisites.twig" with { mod: ' contact-requisites--footer' } only %}
+        </div>
+      
+            {% include "components/navigation/_navigation.twig" with {
+                mod: ' footer__navigation',
+                data : [
+                    [
+                        {
+                            name: 'News',
+                            link: '#'
+                        }, {
+                            name: 'Regular Tours',
+                            link: '#'
+                        }, {
+                            name: 'Riga Tours',
+                            link: '#'
+                        }, {
+                            name: 'Outside Riga Tours',
+                            link: '#'
+                        }
+                    ],
+                    [
+                        {
+                            name: 'About us',
+                            link: '#'
+                        }, {
+                            name: 'Tripadviser reviews',
+                            link: '#'
+                        }, {
+                            name: 'Outside Riga Tours',
+                            link: '#'
+                        }
+                    ]
+                ]
+            } only %}
+  
+
+    </div>
+    <div class="center footer__partners">
+        {% include "components/partners/_partners.twig" %}
+    </div>
+</footer>

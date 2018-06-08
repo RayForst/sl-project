@@ -1,0 +1,50 @@
+// Color
+$c_gray: #f6f6f6;
+$c_gray_2: #d8d8d8;
+$c_dark-gray: #9b9b9b;
+$c_soft-blue: #f9fbfd;
+$c_dark-blue: #1c4386;
+
+$path-fonts: "/fonts/";
+
+$m-mobile--wide: "(min-width: 375px)";
+$m-tablet: "(min-width: 768px)";
+$m-tablet--wide: "(min-width: 1024px)";
+$m-desktop: "(min-width: 1281px)";
+$m-desktop--wide: "(min-width: 1980px)";
+
+@mixin breakpadding() {
+  padding: 0 15px;
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+$m-desktop-small--only: "(min-width: 1025px) and (max-width: 1280px)";
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+$m-tablet--only: "(min-width: 768px) and (max-width: 1280px)";
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+$m-tablet-landscape--only: "(min-width: 768px) and (max-width: 1024px) and (orientation: landscape)";
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+$m-mobile-wide--only: "(min-width: 481px) and (max-width: 767px)";
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+$m-mobile--only: "(min-width: 320px) and (max-width: 767px)";
+
+$m-mobile-tablet--only: "(max-width: 1280px)";

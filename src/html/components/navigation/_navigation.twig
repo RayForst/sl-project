@@ -1,0 +1,11 @@
+<nav class="navigation{{ mod }}">
+    {% for object in data %}
+        <ul class="navigation__list">
+            {% for link in object %}
+                <li class="navigation__link-wrapper">
+                    <a href="{{ link.href }}" class="navigation__link">{{ link.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</nav>
