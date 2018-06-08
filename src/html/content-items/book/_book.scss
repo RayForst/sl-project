@@ -1,0 +1,52 @@
+.book {
+  background-image: linear-gradient(82deg, #1a4385, #015de1);
+  display: flex;
+  padding: {
+    top: 35px;
+    bottom: 35px;
+  }
+
+  @media #{$m_desktop} {
+    padding: {
+      top: 50px;
+      bottom: 50px;
+    }
+  }
+
+  & > .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media #{$m_desktop} {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 25px;
+    line-height: 1.25em;
+
+    @media #{$m_tablet} {
+      font-size: 17px;
+    }
+
+    @media #{$m_desktop} {
+      flex-basis: 58%;
+      margin-right: 10%;
+      margin-bottom: 0;
+      font-size: 19px;
+    }
+  }
+
+  &__button {
+    @media #{$m_desktop} {
+      flex-basis: 32%;
+    }
+  }
+}

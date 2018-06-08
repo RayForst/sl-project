@@ -1,0 +1,43 @@
+.sl-button {
+  border-radius: 35px;
+  background-color: #f5a623;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-align: left;
+  color: #ffffff;
+  border: none;
+  padding: 13px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+
+  @media #{$m-tablet} {
+    padding: 16px 32px;
+    font-size: 17px;
+  }
+
+  @media #{$m-desktop} {
+    font-size: 20px;
+    padding: 20px 43px;
+  }
+
+  &--arrow {
+    padding-right: 100px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 22px;
+
+    @media #{$m-tablet} {
+      right: 32px;
+    }
+
+    @media #{$m-desktop} {
+      right: 43px;
+    }
+  }
+}
