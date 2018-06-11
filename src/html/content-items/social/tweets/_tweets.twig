@@ -1,3 +1,25 @@
-<div>
-    Tweets
+<div class="tweets">
+    <div class="center">
+        <div class="tweets__heading">Recent tweets</div>
+        <div class="controls">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="tweets__list">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for i in 1..4 %}
+                        <div class="swiper-slide">
+                            <a class="tweets__item" href="#">
+
+                                <span class="tweets__date">21 Mar 2018</span>
+                                <span class="tweets__text">The Cat House, designed by the architect Friedrich Schefel, was built in 1909. Friedrich Schefel…
+                                    <span>https://www.instagram.com/p/BgijCtflj3J/</span></span>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
