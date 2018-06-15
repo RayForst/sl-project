@@ -1,5 +1,6 @@
 const webpackStream = require('webpack-stream'),
   webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = function(gulp, plugins, options) {
   let webpackPlugins = [
@@ -14,11 +15,8 @@ module.exports = function(gulp, plugins, options) {
 
   if (options.isProd) {
     webpackPlugins.push(
-      new webpack.optimize.UglifyJsPlugin({
+      new UglifyJsPlugin({
         sourceMap: false,
-        compress: {
-          warnings: false,
-        },
       }),
     )
   }

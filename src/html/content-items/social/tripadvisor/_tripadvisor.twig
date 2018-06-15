@@ -1,3 +1,19 @@
-<div>
-    Tripadvisor
+<div class="tripadvisor">
+    <div class="center">
+        <img src="/img/content-items/social/tripadvisor/tripadvisor.png" alt="">
+
+        <div class="tripadvisor__list">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for i in 1..14 %}
+                        <div class="swiper-slide">
+                            {% include './review/_review.twig' %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
 </div>

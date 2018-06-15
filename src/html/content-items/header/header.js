@@ -1,14 +1,14 @@
-const burger = $('.burger')
+const burger = $('.header-burger')
 
 const open = (trigger) => {
   trigger.addClass('is-active')
-  burger.addClass('burger--open')
+  burger.addClass('header-burger--open')
   $('body').addClass('fixed')
 }
 
 const close = (trigger) => {
   trigger.removeClass('is-active')
-  burger.removeClass('burger--open')
+  burger.removeClass('header-burger--open')
   $('body').removeClass('fixed')
 }
 

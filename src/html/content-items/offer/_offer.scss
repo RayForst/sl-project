@@ -1,0 +1,157 @@
+.offer {
+  overflow: hidden;
+  position: relative;
+  background-color: #1c4386;
+
+  $this: &;
+
+  & > .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45px;
+
+    @media #{$m-tablet} {
+      flex-direction: column;
+      padding-top: 50px;
+    }
+  }
+
+  &__list {
+    @media #{$m-tablet} {
+      display: flex;
+
+      width: 100%;
+    }
+  }
+  &__heading {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.05em;
+    color: #d0e8ff;
+    text-align: center;
+    margin-bottom: 45px;
+
+    @media #{$m_tablet} {
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.38;
+      letter-spacing: 0;
+      text-align: left;
+      color: #d0e8ff;
+      margin-bottom: 60px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.29em;
+    letter-spacing: 0;
+    text-align: left;
+    color: #ffffff;
+    opacity: 0.5;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #ffde49;
+    }
+
+    @media #{$m-tablet} {
+      font-size: 28px;
+      line-height: 1.57em;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    text-decoration: none;
+
+    @media #{$m-tablet} {
+      flex-basis: 28%;
+
+      &:not(:last-of-type) {
+        margin-right: 8%;
+      }
+    }
+
+    &:hover {
+      #{$this}__title {
+        opacity: 0.5;
+      }
+
+      #{$this}__image-container::before,
+      #{$this}__description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image-container {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+
+    &:before {
+      content: "";
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #071835);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 1;
+
+      @media #{$m-tablet} {
+        opacity: 0;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    display: block;
+    max-width: 250px;
+
+    @media #{$m-tablet} {
+      max-width: 350px;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    line-height: 1.19em;
+    letter-spacing: 0;
+    text-align: left;
+    color: #ffffff;
+    white-space: unset;
+    padding: 6%;
+    padding-right: 8%;
+    z-index: 2;
+
+    @media #{$m-tablet} {
+      font-size: 22px;
+      line-height: 1.23em;
+      opacity: 0;
+    }
+  }
+}

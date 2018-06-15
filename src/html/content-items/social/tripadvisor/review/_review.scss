@@ -1,0 +1,158 @@
+.tripadvisor-review {
+  text-decoration: none;
+
+  &__wrapper {
+    margin-bottom: 58px;
+
+    @media #{$m_tablet} {
+      margin-bottom: 0;
+    }
+  }
+  &__comment {
+    font-size: 12px;
+    line-height: 1.25em;
+    text-align: left;
+    color: #4d394b;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+    max-width: 657px;
+    position: relative;
+    padding: 12px 14px;
+    margin-bottom: 25px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      bottom: -5px;
+      left: 28px;
+      background-color: #fff;
+      transform: rotate(45deg);
+      border-radius: 2px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+
+      @media #{$m_tablet} {
+        width: 24px;
+        height: 24px;
+        border-radius: 5px;
+        bottom: -10px;
+        left: 38px;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 10px;
+      bottom: 0px;
+      left: 24px;
+      background-color: #fff;
+      z-index: 2;
+
+      @media #{$m_tablet} {
+        width: 40px;
+        height: 20px;
+        left: 30px;
+      }
+    }
+
+    @media #{$m_tablet} {
+      font-size: 18px;
+      line-height: 1.44em;
+      padding: 20px 30px;
+    }
+  }
+
+  &__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-right: 12px;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    @media #{$m_tablet} {
+      width: 64px;
+      height: 64px;
+      margin-right: 24px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+
+  &__credentials {
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 1.22em;
+    color: #00a47e;
+
+    @media #{$m_tablet} {
+      font-size: 18px;
+    }
+  }
+
+  &__from {
+    color: #4a4a4a;
+
+    @media #{$m_tablet} {
+      font-size: 16px;
+      line-height: 1.38em;
+    }
+  }
+
+  &__rate {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__star {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #00a47e;
+    padding: 2px;
+    background: #fff;
+    border-radius: 100%;
+    margin-left: 8px;
+    position: relative;
+
+    @media #{$m_tablet} {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: 1px;
+      left: 1px;
+      background: #00a47e;
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+
+      @media #{$m_tablet} {
+        width: 12px;
+        height: 12px;
+        top: 2px;
+        left: 2px;
+      }
+    }
+
+    &--disabled {
+      border-color: gray;
+      &:after {
+        background: gray;
+      }
+    }
+  }
+}

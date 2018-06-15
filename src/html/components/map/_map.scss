@@ -1,0 +1,15 @@
+.map {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__container {
+    height: 405px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media #{$m-tablet} {
+      margin-bottom: 45px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.contacts-form {
+  @media #{$m-mobile--only} {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: 0;
+    color: #1c4386;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+
+  &__subline {
+    font-size: 14px;
+    line-height: 1.14em;
+    letter-spacing: 0;
+    color: #6c7c92;
+  }
+
+  &__form {
+    margin-top: 32px;
+
+    @media #{$m_tablet} {
+      margin-top: 60px;
+    }
+  }
+
+  &__button {
+    margin-top: 27px;
+  }
+}

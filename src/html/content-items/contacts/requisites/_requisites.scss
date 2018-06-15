@@ -1,0 +1,79 @@
+.form-requisites {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+  flex-direction: column;
+
+  @media #{$m-tablet} {
+    flex-direction: row;
+    margin-bottom: 58px;
+  }
+
+  &__heading {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #1c4386;
+    font-weight: bold;
+  }
+
+  &__subline {
+    font-size: 16px;
+    line-height: 1.31em;
+    color: #f5a623;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.31em;
+    color: #1c4386;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 27px;
+    padding-left: 51px;
+
+    @media #{$m-tablet} {
+      margin-bottom: 0;
+      padding-left: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &--icon {
+    padding-left: 51px;
+    position: relative;
+  }
+
+  &--icon-addr {
+    &:before {
+      content: "";
+      width: 32px;
+      height: 43px;
+      object-fit: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("/img/content-items/contacts/requisites/address.svg");
+    }
+  }
+
+  &--icon-waze {
+    &:before {
+      content: "";
+      width: 32px;
+      height: 31px;
+      object-fit: contain;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url("/img/content-items/contacts/requisites/waze.png");
+    }
+  }
+}

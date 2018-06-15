@@ -1,0 +1,68 @@
+@import "form/form";
+@import "requisites/requisites";
+
+.contacts {
+  background-color: #f9fbfd;
+
+  & > .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 45px;
+
+    @media #{$m-tablet} {
+      padding-bottom: 45px;
+      padding-top: 50px;
+      align-items: flex-start;
+    }
+  }
+
+  &__heading {
+    font-size: 21px;
+    line-height: 1.05em;
+    letter-spacing: 0;
+    text-align: left;
+    color: #8a9fc1;
+    font-weight: bold;
+    margin-bottom: 12px;
+
+    @media #{$m-tablet} {
+      font-size: 28px;
+      line-height: 1.57em;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    flex-direction: column;
+
+    @media #{$m-tablet} {
+      flex-direction: row;
+      padding-top: 65px;
+    }
+  }
+
+  &__map-container {
+    width: 100%;
+    margin-bottom: 47px;
+
+    @media #{$m-tablet} {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__form-container {
+    width: 100%;
+
+    @media #{$m-tablet} {
+      margin-left: 84px;
+      min-width: 344px;
+      max-width: 344px;
+    }
+  }
+}

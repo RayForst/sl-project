@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: "ProximaNova", sans-serif;
-  background-color: $c_soft-blue;
+  background-color: #fff;
   font-size: 16px;
   min-height: 100vh;
   display: flex;
@@ -70,10 +70,18 @@ body {
 @import "components/achievements/achievements";
 @import "components/rounded-triangle/rounded-triangle";
 @import "components/buttons/buttons";
+@import "components/map/_map";
+@import "components/input/_input";
 
 @import "content-items/header/_header";
+@import "content-items/hero/_hero";
 @import "content-items/header-burger/_header-burger";
 @import "content-items/footer/_footer";
 @import "content-items/book/_book";
 @import "content-items/social/instagram/_instagram";
 @import "content-items/social/tweets/_tweets";
+@import "content-items/social/tripadvisor/_tripadvisor";
+@import "content-items/offer/_offer";
+@import "content-items/benefits/_benefits";
+@import "content-items/carousel/_carousel";
+@import "content-items/contacts/_contacts";

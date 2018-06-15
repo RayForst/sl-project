@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>lots-of</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-smile-line-website-main" transform="translate(-797.000000, -1274.000000)">
+            <g id="Group-18" transform="translate(0.000000, 1124.000000)">
+                <g id="lots-of" transform="translate(797.000000, 150.000000)">
+                    <circle id="Oval-2" fill-opacity="0.111158288" fill="#4A90E2" cx="45" cy="45" r="45"></circle>
+                    <g id="signpost-signs-direction-maps-lost" opacity="0.649999976" transform="translate(18.000000, 18.000000)" stroke="#1C4386" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <g id="Group-16">
+                            <polygon id="Shape" transform="translate(22.307598, 34.925829) scale(-1, 1) rotate(-9.000000) translate(-22.307598, -34.925829) " points="0.649061416 29.0721709 39.2832078 29.0721709 43.9661346 34.9258294 39.2832078 40.779488 0.649061416 40.779488"></polygon>
+                            <path d="M22.2439024,29.0180543 L22.2439024,21.0722228 M22.2439024,9.25416227 L22.2439024,0 L26.9268293,0 L26.9268293,8.51608794 M26.9268293,20.4698761 L26.9268293,29.7410478 M26.9268293,41.7241105 L26.9268293,57.3658537 L22.2439024,57.3658537 L22.2439024,40.9155109" id="Shape"></path>
+                            <polygon id="Shape" transform="translate(25.598494, 14.743440) rotate(-5.000000) translate(-25.598494, -14.743440) " points="3.93995781 8.88978115 42.5741042 8.88978115 47.257031 14.7434397 42.5741042 20.5970982 3.93995781 20.5970982"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

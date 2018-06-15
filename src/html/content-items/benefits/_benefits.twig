@@ -1,3 +1,42 @@
-<div>
-    Benefits
+<div class="benefits">
+    <div class="center">
+        <div class="benefits__heading">What will you get?</div>
+        <div class="benefits__list">
+            {% set benefits = [
+                {
+                    icon_class: 'price',
+                    title: 'Best price<br> guarantee!'
+                }, {
+                    icon_class: 'well-organised',
+                    title: 'Well organised<br> trips'
+                }, {
+                    icon_class: 'lots-of',
+                    title: 'Lots of suggestions<br> of places to visit'
+                }, {
+                    icon_class: 'guides',
+                    title: 'Informative and <br>enthusiastic guides'
+                }, {
+                    icon_class: 'entertain',
+                    title: 'All time entertain'
+                }, {
+                    icon_class: 'countryside',
+                    title: 'Latvia countryside<br> sightseeing'
+                }, {
+                    icon_class: 'languages',
+                    title: 'Tours in 18 different<br> languages'
+                }, {
+                    icon_class: 'reservation',
+                    title: 'Flexible reservation<br> policy'
+                }
+            ] %}
+
+            {% for benefit in benefits %}
+                <div class="benefits__item">
+                    <i class="benefits__icon"><img src="/img/content-items/benefits/{{ benefit.icon_class }}.svg" alt=""></i>
+                    <div class="benefits__item-title">{{ benefit.title }}</div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
 </div>

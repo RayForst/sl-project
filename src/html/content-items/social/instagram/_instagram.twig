@@ -3,31 +3,21 @@
         <div class="instagram__heading">Last from Instagram</div>
         <div class="instagram__hashtag">#smilelinewalkingtours</div>
         <div class="controls">
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
         <div class="instagram__list">
-
-            <!-- Slider main container -->
             <div class="swiper-container">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
-
-                    {% for i in 1..8 %}
+                    {% for i in 1..14 %}
                         <div class="swiper-slide">
                             <a class="instagram__image-wrap" href="#">
                                 <img src="https://placeimg.com/768/768/arch?v={{i}}" class="instagram__image" alt="">
                             </a>
                         </div>
                     {% endfor %}
-
                 </div>
-
             </div>
-
         </div>
     </div>
-
 </div>
