@@ -1,44 +1,53 @@
 <div class="hero">
     <div class="hero__list">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                {% for i in 1..4 %}
-                    <div class="swiper-slide">
-                        <div class="hero__slide">
-                            <div class="hero__slide-content">
-                                <div class="center">
-                                    <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                    <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
-                                    <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+        {% if noswiper is not defined %}
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for i in 1..4 %}
+                        <div class="swiper-slide">
+                            <div class="hero__slide" style="background-image: url('/img/content-items/hero/img.jpg');">
+                                <div class="hero__slide-content">
+                                    <div class="center">
+                                        <h1 class="hero__title">Walking tours in Old Riga</h1>
+                                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                                        <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="swiper-slide">
-                        <div class="hero__slide hero__slide--v2">
-                            <div class="hero__slide-content">
-                                <div class="center">
-                                    <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                    <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
-                                    <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                        <div class="swiper-slide">
+                            <div class="hero__slide" style="background-image: url('/img/content-items/hero/img2.jpg');">
+                                <div class="hero__slide-content">
+                                    <div class="center">
+                                        <h1 class="hero__title">Walking tours in Old Riga</h1>
+                                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                                        <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                {% endfor %}
-            </div>
-
-            <!-- Add Pagination -->
-            <div class="hero__pagination">
-                <div class="center">
-                    <div class="swiper-pagination"></div>
-
+                    {% endfor %}
                 </div>
 
+                <!-- Add Pagination -->
+                <div class="hero__pagination">
+                    <div class="center">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% else %}
+            <div class="hero__slide hero__slide--no-button" style="background-image: url('/img/content-items/hero/img3.jpg');">
+                <div class="hero__slide-content">
+                    <div class="center">
+                        <h1 class="hero__title">Walking tours in Old Riga</h1>
+                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     </div>
 
 </div>

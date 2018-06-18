@@ -4,21 +4,25 @@
   &__slide {
     height: 280px;
     width: 100%;
-    background: url("/img/content-items/hero/img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 90%;
     position: relative;
 
     @media #{$m_tablet} {
       height: 495px;
     }
 
+    &--no-button {
+      height: 200px;
+
+      @media #{$m_tablet} {
+        height: 400px;
+      }
+    }
+
     &--v2 {
-      background: url("/img/content-items/hero/img2.jpg");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: 0% 90%;
     }
 
     &:before {

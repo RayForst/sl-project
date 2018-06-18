@@ -29,17 +29,50 @@
     text-decoration: none;
     display: inline-block;
     white-space: nowrap;
+    transition: color 0.4s ease;
+
+    svg circle {
+      transition: fill 0.4s ease;
+    }
 
     &--phone {
       color: #4a90e2;
+
+      &:hover {
+        color: #25d366;
+
+        circle {
+          fill: #25d366;
+        }
+      }
     }
 
     &--mail {
       color: #e74e44;
+
+      svg path {
+        transition: fill 0.4s ease;
+      }
+
+      &:hover {
+        color: #4a90e2;
+
+        path {
+          fill: #4a90e2;
+        }
+      }
     }
 
     &--whatsapp {
       color: #25d366;
+
+      &:hover {
+        color: #e74e44;
+
+        circle {
+          fill: #e74e44;
+        }
+      }
     }
 
     @media #{$m_tablet} {

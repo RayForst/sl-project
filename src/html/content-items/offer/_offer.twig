@@ -2,14 +2,20 @@
     <div class="center">
         <div class="offer__heading">We have some<br>interesting tours for you</div>
         <div class="offer__list">
-            {% for i in 1..3 %}
+            {% set images = [
+            'daily-tours',
+            'riga-tours',
+            'outsideriga-tours'
+        ]%}
+            {% for i in 0..2 %}
                 <a href="#" class="offer__item">
                     <span class="offer__image-container">
-                        <img src="https://placeimg.com/768/768/arch?v={{i}}{{i}}" class="offer__image" alt="">
+                        <img src="/img/content-items/offer/{{images[i]}}.jpg" class="offer__image" alt="">
                         <span class="offer__description">Take part in any of our regular tours to different destinations every day, and explore the historical and cultural sights.</span>
                     </span>
 
-                    <span class="offer__title">Regular daily tours</span>
+                    <span class="offer__title">Regular daily tours
+                        <img src="/img/content-items/offer/arrow.svg" alt=""></span>
                 </a>
             {% endfor %}
         </div>

@@ -12,4 +12,8 @@
       margin-bottom: 45px;
     }
   }
+
+  @media #{$m_tablet} {
+    align-items: flex-start;
+  }
 }

@@ -1,3 +1,25 @@
-<div>
-    news list
+<div class="news-list">
+    <div class="center">
+
+        <div class="news-list__heading">Recent stories</div>
+        <div class="news-list__list">
+            {% for i in 1..6 %}
+                <a href="#" class="news-list__item">
+                    <span class="news-list__image" style="background-image: url('https://placeimg.com/340/170/nature?{{i}}');"></span>
+                    <span class="news-list__description">
+
+                        <span class="news-list__head">Earth Hour 2018</span>
+
+                        <span class="news-list__text">#TeamSmileline is celebrating #earthhour2018 today. Everyone is welcome to celebrate and….</span>
+                    </span>
+                </a>
+
+            {% endfor %}
+        </div>
+
+        <div class="news-list__buttton-wrap">
+            <a href="#" class="news-list__show-more sl-button sl-button--border">show more</a>
+
+        </div>
+    </div>
 </div>

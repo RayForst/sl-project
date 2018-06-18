@@ -98,6 +98,10 @@
       #{$this}__description {
         opacity: 1;
       }
+
+      #{$this}__description {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -147,6 +151,8 @@
     padding: 6%;
     padding-right: 8%;
     z-index: 2;
+    transform: translateY(200px);
+    transition: transform 0.4s ease;
 
     @media #{$m-tablet} {
       font-size: 22px;

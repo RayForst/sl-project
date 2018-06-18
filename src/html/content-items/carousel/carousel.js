@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import './item'
 
 let mySwiper
 let mySwiper2

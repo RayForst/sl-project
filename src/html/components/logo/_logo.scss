@@ -1,11 +1,10 @@
 .logo {
   display: inline-flex;
 
-  &__placeholder {
+  &__image {
     width: 32px;
     height: 32px;
     border-radius: 100%;
-    background-color: yellow;
     display: inline-flex;
   }
 
@@ -13,7 +12,7 @@
 
   &--header {
     @media #{$m_tablet} {
-      #{$this}__placeholder {
+      #{$this}__image {
         width: 50px;
         height: 50px;
       }
@@ -24,7 +23,7 @@
       border-right: solid 1px #eeeeee;
       padding-right: 65px;
 
-      #{$this}__placeholder {
+      #{$this}__image {
         width: 79px;
         height: 79px;
       }
@@ -32,7 +31,7 @@
   }
 
   &--footer {
-    #{$this}__placeholder {
+    #{$this}__image {
       width: 74px;
       height: 74px;
 

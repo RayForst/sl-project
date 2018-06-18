@@ -1,6 +1,7 @@
 .offer-carousel {
   overflow: hidden;
   position: relative;
+  $this: &;
 
   & > .center {
     display: flex;
@@ -77,10 +78,37 @@
     @media #{$m_tablet} {
       padding: 24px 32px;
     }
+
+    &--open {
+      #{$this}__item-heading {
+        transform: translateY(0);
+        font-size: 14px;
+
+        margin-bottom: 11px;
+
+        @media #{$m-tablet} {
+          font-size: 24px;
+          margin-bottom: 22px;
+        }
+      }
+
+      #{$this}__item-content {
+        transform: translateY(100%);
+        animation: popup 0.4s forwards;
+      }
+
+      #{$this}__item-subline {
+        display: block;
+        margin-bottom: 40px;
+      }
+      #{$this}__button {
+        display: block;
+      }
+    }
   }
 
   &__item-heading {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     line-height: 1em;
     letter-spacing: 0;
@@ -88,11 +116,10 @@
     color: #ffffff;
     display: flex;
     justify-content: center;
-    margin-bottom: 11px;
 
     @media #{$m-tablet} {
-      font-size: 24px;
-      margin-bottom: 22px;
+      font-size: 35px;
+      transform: translateY(12px);
     }
   }
 
@@ -104,6 +131,11 @@
     height: 100%;
     z-index: 2;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    transition: transform 0.4s ease;
 
     @media #{$m-tablet} {
       padding: 54px 57px;
@@ -118,9 +150,23 @@
     display: flex;
     justify-content: center;
     opacity: 0.6;
+    display: none;
 
     @media #{$m-tablet} {
       font-size: 18px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 18.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: none;
+
+    @media #{$m_tablet} {
+      bottom: 37px;
     }
   }
 
@@ -273,16 +319,13 @@
 
     position: relative;
   }
+}
 
-  &__button {
-    position: absolute;
-    bottom: 18.5px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-
-    @media #{$m_tablet} {
-      bottom: 37px;
-    }
+@keyframes popup {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
