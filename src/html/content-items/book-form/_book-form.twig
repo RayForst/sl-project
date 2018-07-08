@@ -1,0 +1,98 @@
+<div class="tour-body__form book-form">
+    <form class="float-label book-form__form" data-price="20.00" data-currency="€">
+        <fieldset class="book-form__fieldset book-form__fieldset--details">
+            <legend class="book-form__legend">Book a Tour</legend>
+
+            <div class="static-control">
+                <div class="static-label">
+                    PREFERRED TOUR DATE
+                </div>
+
+                <div class="date-wrap">
+                    <div class="date-select">
+                        <div class="date-placeholder">
+                            <span class="placeholder day">day</span>
+                            <span class="placeholder month">month</span>
+                            <span class="placeholder year">year</span>
+                        </div>
+
+                        <img src="/img/content-items/book-form/calendar.svg" class="date-calendar-icon" alt="">
+                    </div>
+
+                    <input type="text" name="date" id="date" data-theme="smileline" data-format="d.m.Y" data-min-year="2018" data-large-mode="true">
+                </div>
+            </div>
+
+            <div class="static-control">
+                <div class="static-label">
+                    PREFERRED TOUR TIME
+                </div>
+
+                <div class="select-wrap">
+                    <select name="number" id="number">
+                        <option selected="selected">12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>15:00</option>
+                        <option>16:00</option>
+                        <option>17:00</option>
+                        <option>18:00</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="static-control static-control--full">
+                <div class="static-label">
+                    LANGUAGE
+                </div>
+
+                <div class="select-wrap">
+                    <select name="language" id="language">
+                        <option>english</option>
+                        <option>latvian</option>
+                        <option>russian</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="book-form__double-wrap">
+                <div class="static-control">
+                    <div class="static-label">
+                        Number of people
+                    </div>
+
+                    {% include 'components/input-number/_input-number.twig' with { name: 'people' } %}
+                </div>
+
+                <div class="static-control">
+                    <div class="static-label">
+                        total
+                    </div>
+
+                    <div class="book-form__total">€20.00</div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="book-form__fieldset book-form__fieldset--info">
+            <legend class="book-form__legend book-form__legend--contact">YOUR CONTACTS</legend>
+            <div class="control control--theme-dark">
+                <input type="text" name="name" id="name" placeholder="YOUR NAME" required="required">
+                <label for="name">YOUR NAME</label>
+            </div>
+
+            <div class="control control--theme-dark">
+                <input type="email" name="email" id="email" placeholder="YOUR EMAIL" required="required">
+                <label for="email">YOUR EMAIL</label>
+            </div>
+
+            <div class="control control--theme-dark">
+                <input type="text" name="phone" id="phone" placeholder="PHONE NUMBER" required="required">
+                <label for="phone">PHONE NUMBER</label>
+            </div>
+
+        </fieldset>
+
+        <button class="sl-button sl-button--wide sl-button--color-yellow">Book tour</button>
+    </form>
+</div>

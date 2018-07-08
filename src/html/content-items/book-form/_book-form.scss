@@ -1,0 +1,189 @@
+.book-form {
+  padding: 37px 47px 45px 41px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    width: 100%;
+
+    &--details {
+      padding-bottom: 14px;
+    }
+
+    &--info {
+      padding-bottom: 53px;
+    }
+  }
+
+  &__legend {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.11em;
+    color: #50e3c2;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 26px;
+    line-height: 20px;
+
+    &--contact {
+      font-size: 16px;
+      color: #74b4ff;
+      letter-spacing: 0.09em;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__double-wrap {
+    display: flex;
+
+    .static-label {
+      padding-bottom: 8px;
+    }
+
+    .static-control {
+      &:first-of-type {
+        margin-right: 37px;
+      }
+    }
+  }
+
+  &__total {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffde49;
+  }
+}
+
+.static-control {
+  margin-bottom: 36px;
+  .static-label {
+    font-family: "ProximaNova";
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+    line-height: 1.6em;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .ui-selectmenu-button.ui-button {
+    width: auto;
+    background: transparent;
+    border: none;
+    text-transform: capitalize;
+    border-bottom: 1px solid #4a90e2;
+    font-family: "ProximaNova", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1em;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    border-radius: 0;
+    padding: {
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      top: 8px;
+    }
+    .ui-selectmenu-text {
+      overflow: visible;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--full {
+    .ui-selectmenu-button.ui-button {
+      width: 100%;
+    }
+  }
+}
+
+.date-wrap {
+  position: relative;
+  height: 28px;
+
+  .date-select {
+    height: 31px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .date-calendar-icon {
+    width: 16px;
+    height: 15px;
+    margin-left: 5px;
+    transform: translateX(4px);
+  }
+
+  .date-placeholder {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.63em;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-bottom: 1px solid #4a90e2;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .placeholder {
+    display: inline-flex;
+    flex-basis: 31%;
+    text-align: center;
+    justify-content: center;
+    height: 26px;
+    align-items: flex-end;
+    padding-bottom: 7px;
+
+    &.month {
+      flex-basis: 38%;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 1px;
+        background: #4a90e2;
+        height: 4px;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    opacity: 0;
+    height: 31px;
+    cursor: pointer;
+  }
+}

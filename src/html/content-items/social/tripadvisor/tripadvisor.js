@@ -3,7 +3,10 @@ import Swiper from 'swiper'
 let mySwiper
 
 const enableSwiper = () => {
+  if (!$('.tripadvisor .swiper-container').length) return false
+
   mySwiper = new Swiper('.tripadvisor .swiper-container', {
+    speed: 600,
     navigation: {
       nextEl: '.tripadvisor .swiper-button-next',
       prevEl: '.tripadvisor .swiper-button-prev',
@@ -15,6 +18,8 @@ const enableSwiper = () => {
 }
 
 const breakpointChecker = () => {
+  if (!$('.tripadvisor').length) return false
+
   console.log('breakpoint checkeer')
   const breakpoint = window.matchMedia('(min-width:768px)')
   // if larger viewport and multi-row layout needed
@@ -25,12 +30,10 @@ const breakpointChecker = () => {
 
       mySwiper = undefined
 
-      console.log('desttroy')
       $('.tripadvisor .swiper-wrapper').removeAttr('style')
       $('.tripadvisor .swiper-slide').removeAttr('style')
     }
   } else if (breakpoint.matches !== false && mySwiper === undefined) {
-    console.log('enable')
     return enableSwiper()
   }
 

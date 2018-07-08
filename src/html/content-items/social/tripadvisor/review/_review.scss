@@ -16,10 +16,14 @@
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
-    max-width: 657px;
+    max-width: 500px;
     position: relative;
     padding: 12px 14px;
     margin-bottom: 25px;
+
+    @media #{$m_tablet--wide} {
+      max-width: 657px;
+    }
 
     &:after {
       position: absolute;

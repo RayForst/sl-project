@@ -1,0 +1,11 @@
+{% extends "_layout.twig" %}
+
+{% block title %}Tour -
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    {% include "content-items/hero/_hero.twig" with {slideMod: 'tour' }%}
+    {% include "content-items/calendar-list/_calendar-list.twig" %}
+    {% include "content-items/offer/_offer.twig" %}
+{% endblock %}

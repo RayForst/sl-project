@@ -26,9 +26,11 @@
 
   &__form {
     margin-top: 32px;
+    max-width: 300px;
 
     @media #{$m_tablet} {
       margin-top: 60px;
+      max-width: none;
     }
   }
 

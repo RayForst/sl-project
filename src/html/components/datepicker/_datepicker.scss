@@ -1,0 +1,70 @@
+@import "vendors/datepicker/datedropper";
+
+/*
+
+	INSTRUCTIONS ---------------------------------------------------------------------------------
+  
+  1. link this stylesheet in the head of your HTML
+  	 <link href="YOUR PATH/smileline.css" rel="stylesheet" type="text/css" />
+     
+  2. Set the file name as data-theme attribute on your input
+  	 <input data-theme="smileline" />
+     
+  3. That's it!
+  
+  When you run script the style will be automatically applied.
+
+*/
+div.datedropper.smileline {
+  border-radius: 8px;
+  width: 180px;
+}
+div.datedropper.smileline .picker {
+  border-radius: 8px;
+  box-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
+}
+div.datedropper.smileline .pick-l {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+div.datedropper.smileline:before,
+div.datedropper.smileline .pick-submit,
+div.datedropper.smileline .pick-lg-b .pick-sl:before,
+div.datedropper.smileline .pick-m,
+div.datedropper.smileline .pick-lg-h {
+  background-color: #ffde49;
+}
+div.datedropper.smileline .pick-y.pick-jump,
+div.datedropper.smileline .pick li span,
+div.datedropper.smileline .pick-lg-b .pick-wke,
+div.datedropper.smileline .pick-btn {
+  color: #ffde49;
+}
+div.datedropper.smileline .picker,
+div.datedropper.smileline .pick-l {
+  background-color: #fff;
+}
+div.datedropper.smileline .picker,
+div.datedropper.smileline .pick-arw,
+div.datedropper.smileline .pick-l {
+  color: #4d4d4d;
+}
+div.datedropper.smileline .pick-m,
+div.datedropper.smileline .pick-m .pick-arw,
+div.datedropper.smileline .pick-lg-h,
+div.datedropper.smileline .pick-lg-b .pick-sl,
+div.datedropper.smileline .pick-submit {
+  color: #000;
+}
+div.datedropper.smileline.picker-tiny:before,
+div.datedropper.smileline.picker-tiny .pick-m {
+  background-color: #fff;
+}
+div.datedropper.smileline.picker-tiny .pick-m,
+div.datedropper.smileline.picker-tiny .pick-m .pick-arw {
+  color: #4d4d4d;
+}
+div.datedropper.smileline.picker-lkd .pick-submit {
+  background-color: #fff;
+  color: #4d4d4d;
+}

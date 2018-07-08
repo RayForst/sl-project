@@ -5,19 +5,28 @@
                 <div class="swiper-wrapper">
                     {% for i in 1..4 %}
                         <div class="swiper-slide">
-                            <div class="hero__slide" style="background-image: url('/img/content-items/hero/img.jpg');">
+                            <div class="hero__slide{% if slideMod is defined %} hero__slide--{{ slideMod }}{% endif %}">
                                 <div class="hero__slide-content">
                                     <div class="center">
-                                        <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
-                                        <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                                        {% if slideMod is defined %}
+                                            <span class="hero__id">ID 002</span>
+                                            <h1 class="hero__title">Walking tours in Old Riga</h1>
+                                            <span class="gallery-trigger"></span>
+                                        {% else %}
+                                            <h1 class="hero__title">Walking tours in Old Riga</h1>
+                                            <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                                            <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                                        {% endif %}
+
                                     </div>
                                 </div>
+
+                                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img.jpg');"></span>
                             </div>
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="hero__slide" style="background-image: url('/img/content-items/hero/img2.jpg');">
+                            <div class="hero__slide {% if slideMod is defined %} hero__slide--{{ slideMod }}{% endif %}">
                                 <div class="hero__slide-content">
                                     <div class="center">
                                         <h1 class="hero__title">Walking tours in Old Riga</h1>
@@ -25,11 +34,32 @@
                                         <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
                                     </div>
                                 </div>
+
+                                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img2.jpg');"></span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if slideMod is defined %}
+                    {# <div class="center hero__navigation-container">
+                        <div class="hero__navigation-inner">
+                            <div class="hero__navigation-outer">
+
+                                <div class="hero__navigation-content">
+                                    <div class="swiper-button-prev"></div>
+
+                                    <div class="swiper-button-next"></div>
+
+                                    <span class="gallery-trigger">
+                                        <img src="/img/content-items/hero/all-photos.svg" alt="">
+                                    </span>
+                                </div>
+
                             </div>
                         </div>
 
-                    {% endfor %}
-                </div>
+                    </div> #}
+                {% endif %}
 
                 <!-- Add Pagination -->
                 <div class="hero__pagination">
@@ -39,13 +69,16 @@
                 </div>
             </div>
         {% else %}
-            <div class="hero__slide hero__slide--no-button" style="background-image: url('/img/content-items/hero/img3.jpg');">
+            <div class="hero__slide hero__slide--no-button">
                 <div class="hero__slide-content">
                     <div class="center">
                         <h1 class="hero__title">Walking tours in Old Riga</h1>
                         <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
                     </div>
                 </div>
+
+                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img3.jpg');"></span>
+
             </div>
         {% endif %}
     </div>

@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import lazyload from '../../components/lazy-load/lazy-load'
 import './item'
 
 let mySwiper
@@ -30,6 +31,9 @@ const enableSwiper = () => {
         spaceBetween: 20,
       },
     },
+  }).on('slideChange', () => {
+    console.log('change')
+    lazyload.update()
   })
 
   mySwiper2 = new Swiper('.offer-carousel .offer-carousel__tab[data-tab="2"] .swiper-container', {
@@ -46,6 +50,9 @@ const enableSwiper = () => {
         spaceBetween: 20,
       },
     },
+  }).on('slideChange', () => {
+    console.log('change 2')
+    lazyload.update()
   })
 
   return true
@@ -94,6 +101,7 @@ const openTab = (e) => {
   $tabs.eq(index - 1).addClass('active')
 
   $(`.offer-carousel .control-tab-${index}`).addClass('active')
+  lazyload.update()
 }
 
 window.addEventListener('resize', breakpointChecker)

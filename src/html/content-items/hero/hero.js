@@ -11,13 +11,34 @@ const reinitContainer = () => {
 
 const enableSwiper = () => {
   reinitContainer()
-
-  return new Swiper('.hero .swiper-container', {
+  const swiper = new Swiper('.hero .swiper-container', {
+    speed: 600,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
   })
+
+  swiper
+    .on('slideChange', () => {
+      console.log('change', arguments)
+    })
+    .on('transitionEnd', () => {
+      // console.log('transitionEnd', arguments, swiper.activeIndex)
+      $('.swiper-slide-animation').removeClass('swiper-slide-animation')
+      $('.hero .swiper-slide-active').addClass('swiper-slide-animation')
+    })
+
+  return swiper
 }
 
 enableSwiper()
+
+$('.hero__slide').on('mousemove', function (e) {
+  $(this)
+    .find('.hero__slide-image')
+    .css({
+      'transform-origin': `${((e.pageX - $(this).offset().left) / $(this).width()) *
+        100}% ${((e.pageY - $(this).offset().top) / $(this).height()) * 100}%`,
+    })
+})

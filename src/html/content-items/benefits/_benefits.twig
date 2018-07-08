@@ -1,4 +1,4 @@
-<div class="benefits">
+<div class="benefits" id="benefits">
     <div class="center">
         <div class="benefits__heading">What will you get?</div>
         <div class="benefits__list">
@@ -31,7 +31,7 @@
             ] %}
 
             {% for benefit in benefits %}
-                <div class="benefits__item">
+                <div class="benefits__item tooltip" title="During the tour you’ll walk along the narrow streets of the Medieval Hanseatic Old Town">
                     <i class="benefits__icon"><img src="/img/content-items/benefits/{{ benefit.icon_class }}.svg" alt=""></i>
                     <div class="benefits__item-title">{{ benefit.title }}</div>
                 </div>

@@ -73,36 +73,69 @@
       width: 100%;
       height: 100%;
       opacity: 0.5;
+      transition: opacity 0.5s ease;
+      border-radius: 14px;
     }
 
     @media #{$m_tablet} {
       padding: 24px 32px;
     }
 
-    &--open {
-      #{$this}__item-heading {
-        transform: translateY(0);
-        font-size: 14px;
+    #{$this}__item-heading {
+      transform: translateY(0);
+      font-size: 17px;
 
-        margin-bottom: 11px;
+      margin-bottom: 11px;
+      transition: transform 0.5s ease;
 
-        @media #{$m-tablet} {
-          font-size: 24px;
-          margin-bottom: 22px;
+      @media #{$m-tablet} {
+        font-size: 35px;
+        margin-bottom: 13px;
+      }
+    }
+
+    #{$this}__item-content {
+      transform: translateY(51%);
+
+      &#{$this}__item-content--big {
+        transform: translateY(63%);
+
+        #{$this}__item-heading {
+          transform: none !important;
         }
+      }
+    }
+
+    #{$this}__item-subline {
+      display: block;
+      margin-bottom: 40px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    #{$this}__button {
+      display: block;
+    }
+
+    &--open {
+      &:before {
+        opacity: 0.7;
+      }
+      #{$this}__item-heading {
+        // font-size: 14px;
+
+        transform: scale(0.6856);
+
+        // @media #{$m-tablet} {
+        //     font-size: 24px;
+        //   }
+      }
+      #{$this}__item-subline {
+        opacity: 0.6;
       }
 
       #{$this}__item-content {
-        transform: translateY(100%);
-        animation: popup 0.4s forwards;
-      }
-
-      #{$this}__item-subline {
-        display: block;
-        margin-bottom: 40px;
-      }
-      #{$this}__button {
-        display: block;
+        transform: translateY(0%) !important;
+        // animation: popup 0.5s forwards;
       }
     }
   }
@@ -133,9 +166,9 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 
     @media #{$m-tablet} {
       padding: 54px 57px;
@@ -177,6 +210,7 @@
     width: 100%;
     position: absolute;
     left: 0;
+    overflow: hidden;
 
     bottom: 16px;
 
@@ -229,11 +263,18 @@
     left: 0;
     display: flex;
     order: 2;
+    transition: opacity 0.6s ease-out, transform 0.4s ease-out;
+    transform: translateY(128px);
+
+    @media #{$m-tablet} {
+      transform: translateY(256px);
+    }
 
     &.active {
       visibility: visible;
       opacity: 1;
       order: 1;
+      transform: translateY(0);
     }
   }
 

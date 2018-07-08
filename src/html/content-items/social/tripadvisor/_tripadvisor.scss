@@ -10,6 +10,29 @@
     align-items: center;
     padding-bottom: 0;
     padding-top: 35px;
+    position: relative;
+
+    @media #{$m-tablet} {
+      &::after,
+      &::before {
+        content: "";
+        background-image: url("/img/content-items/social/tripadvisor/bubble.png");
+        position: absolute;
+        top: 193px;
+
+        width: 438px;
+        height: 158px;
+        background-size: cover;
+      }
+
+      &::after {
+        right: 0;
+      }
+
+      &::before {
+        left: 0;
+      }
+    }
 
     @media #{$m-tablet} {
       padding-bottom: 60px;
@@ -25,7 +48,7 @@
     @media #{$m-tablet} {
       display: flex;
       width: 100%;
-      padding-top: 45px;
+      padding-top: 50px;
       overflow: hidden;
     }
   }
@@ -48,7 +71,6 @@
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -63,7 +85,7 @@
       width: 54px;
       height: 54px;
       background-size: auto;
-      margin-top: 0;
+      margin-top: -54px;
     }
   }
 

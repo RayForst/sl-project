@@ -4,6 +4,7 @@
   padding: 0;
   display: inline-flex;
   margin-right: -7px;
+  $this: &;
 
   &__item-wrapper {
     display: inline-flex;
@@ -12,11 +13,16 @@
   &__item {
     padding: 0 7px;
     display: inline-flex;
+
+    &:hover #{$this}__icon {
+      transform: scale(1.15);
+    }
   }
 
   &__icon {
     width: 20px;
     height: 20px;
+    transition: transform 0.3s linear;
 
     @media #{$m_tablet} {
       width: 30px;

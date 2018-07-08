@@ -1,0 +1,54 @@
+.tour-body {
+  padding: {
+    top: 50px;
+    bottom: 80px;
+  }
+
+  &__center {
+    position: relative;
+  }
+
+  &__description {
+    width: 100%;
+    padding: 0;
+
+    @media #{$m_tablet} {
+      width: calc(100% - 400px);
+      padding-right: 58px;
+    }
+  }
+  &__paragraph {
+    font-size: 15px;
+    line-height: 1.45em;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 35px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media #{$m_tablet} {
+      font-size: 22px;
+      line-height: 1.45em;
+    }
+  }
+
+  &__form {
+    width: 309px;
+    opacity: 0.9;
+    border-radius: 14px;
+    background-color: #1c4386;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.19);
+    height: 753px;
+    z-index: 2;
+    margin: auto;
+    margin-top: 39px;
+
+    @media #{$m_tablet} {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

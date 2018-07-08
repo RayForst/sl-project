@@ -1,0 +1,33 @@
+.quantity-select {
+  border-bottom: 1px solid #4a90e2;
+  display: inline-flex;
+  .quantity-select__input {
+    width: 40px;
+    color: #fff;
+    background: transparent;
+    padding: 0;
+    text-align: center;
+  }
+
+  .quantity-select__control {
+    font-family: ProximaNova;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 0.71em;
+    color: #ffde49;
+    cursor: pointer;
+    user-select: none;
+    width: 16px;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    text-align: center;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+}

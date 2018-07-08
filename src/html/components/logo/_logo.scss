@@ -6,6 +6,11 @@
     height: 32px;
     border-radius: 100%;
     display: inline-flex;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.15);
+    }
   }
 
   $this: &;
@@ -19,9 +24,8 @@
     }
 
     @media #{$m_desktop} {
-      padding: 28px 0 33px 0;
-      border-right: solid 1px #eeeeee;
-      padding-right: 65px;
+      margin: 28px 0 33px 0;
+      margin-right: 65px;
 
       #{$this}__image {
         width: 79px;

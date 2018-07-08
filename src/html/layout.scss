@@ -72,6 +72,10 @@ body {
 @import "components/buttons/buttons";
 @import "components/map/_map";
 @import "components/input/_input";
+@import "components/input-number/_input-number";
+@import "components/datepicker/_datepicker";
+@import "components/dropdown/_dropdown";
+@import "components/calendar-item/_calendar-item";
 
 @import "content-items/header/_header";
 @import "content-items/hero/_hero";
@@ -86,4 +90,18 @@ body {
 @import "content-items/carousel/_carousel";
 @import "content-items/contacts/_contacts";
 @import "content-items/tour/_list";
+@import "content-items/tour/tour-body";
 @import "content-items/news/_list";
+@import "content-items/book-form/_book-form";
+@import "content-items/calendar-list/_calendar-list";
+
+.swiper-button-prev,
+.swiper-button-next {
+  &:not(.swiper-button-disabled) {
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

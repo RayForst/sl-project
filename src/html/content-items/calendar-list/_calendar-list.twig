@@ -1,0 +1,25 @@
+<div class="calendar-list">
+    <div class="center">
+        {% set calendarItems = [
+            {
+                title: 'Jurmala sightseeing (group tour from May 1st to September 30) @ Jurmala'
+            },
+            {
+                title: 'Jurmala sightseeing (group tour from May 1st to September 30) @ Jurmala'
+            },
+            {
+                title: 'Jurmala sightseeing (group tour from May 1st to September 30) @ Jurmala'
+            },  
+            {
+                title: 'Jurmala sightseeing (group tour from May 1st to September 30) @ Jurmala'
+            },
+            {
+                title: 'Jurmala sightseeing (group tour from May 1st to September 30) @ Jurmala'
+            }
+        ]%}
+
+        {% for item in calendarItems %}
+            {% include 'components/calendar-item/_calendar-item.twig' with { item: item } only %}
+        {% endfor %}
+    </div>
+</div>

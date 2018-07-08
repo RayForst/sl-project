@@ -1,12 +1,82 @@
 .hero {
   @import "swiper/dist/css/swiper.min";
 
+  .swiper-slide {
+    overflow: hidden;
+
+    .hero__slide::before {
+      opacity: 0.1;
+      transition: all 0.6s ease-out;
+    }
+
+    .center {
+      transform: translateY(-20%);
+      height: 100%;
+      opacity: 0;
+      transition: transform 0.5s ease-out 400ms, opacity 0.5s ease-out 400ms;
+    }
+
+    &-active {
+      .center {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hero__slide::before {
+        opacity: 0.74;
+      }
+    }
+  }
+
+  $this: &;
+
+  &__id {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1em;
+    color: #ffde49;
+
+    padding: {
+      top: 70px;
+      bottom: 6px;
+    }
+
+    @media #{$m_tablet} {
+      font-size: 32px;
+
+      padding: {
+        top: 150px;
+      }
+    }
+
+    & + #{$this}__title {
+      padding-top: 0;
+    }
+  }
+
+  &__slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: transform 0.4s linear;
+  }
+
   &__slide {
     height: 280px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
+
+    &:hover {
+      #{$this}__slide-image {
+        transform: scale(1.05);
+      }
+    }
 
     @media #{$m_tablet} {
       height: 495px;
@@ -17,6 +87,12 @@
 
       @media #{$m_tablet} {
         height: 400px;
+      }
+    }
+
+    &--tour {
+      @media #{$m_tablet} {
+        height: 475px;
       }
     }
 
@@ -34,7 +110,6 @@
       height: 100%;
       display: block;
       z-index: 1;
-      opacity: 0.74;
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #051f4c);
     }
 
@@ -74,7 +149,7 @@
 
   &__button {
     position: absolute;
-    bottom: 43px;
+    bottom: 53px;
 
     @media #{$m_tablet} {
       bottom: 112px;
@@ -138,6 +213,7 @@
     text-align: center;
     color: #ffffff;
     margin: 0;
+    padding: 0 10%;
 
     @media #{$m_tablet} {
       font-size: 22px;
@@ -145,6 +221,7 @@
       text-align: left;
       max-width: 50%;
       margin-bottom: 70px;
+      padding: 0;
     }
   }
 
@@ -170,16 +247,74 @@
       }
     }
     span.swiper-pagination-bullet {
-      margin-right: 10px;
+      padding: 10px;
+      opacity: 1;
+
+      background: transparent;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        background: #fff;
+      }
+
+      &:focus {
+        outline: none;
+      }
 
       &-active {
-        background: #ffde49;
+        &:after {
+          background: #ffde49;
+        }
       }
     }
   }
 
-  .swiper-pagination-bullet {
-    background: #fff;
-    opacity: 1;
+  .swiper-button-prev,
+  .swiper-container-rtl .swiper-butt on-next,
+  .swiper-button-next,
+  .swiper-container-rtl .swiper-button-prev {
+    background-image: url("/img/content-items/social/tripadvisor/right-trip.svg");
+    width: 54px;
+    height: 54px;
+    background-size: auto;
+  }
+
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+
+  &__navigation-container {
+    position: relative;
+  }
+
+  &__navigation-inner {
+    position: relative;
+    width: calc(100% - 400px);
+    padding-right: 58px;
+  }
+
+  &__navigation-content {
+    position: relative;
+    position: absolute;
+    bottom: 53px;
+  }
+}
+
+.hero {
+  .swiper-slide {
+  }
+}
+
+@keyframes mymove {
+  from {
+  }
+  to {
   }
 }

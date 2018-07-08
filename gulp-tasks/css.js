@@ -8,6 +8,7 @@ module.exports = function(gulp, plugins, options) {
         includePaths: [
           'node_modules/reset-css/',
           'node_modules/normalize-scss/sass/',
+          'node_modules/tooltipster/src/css/',
           'node_modules/',
         ],
       }),

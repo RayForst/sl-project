@@ -1,7 +1,10 @@
+@import "tooltipster/src/css/tooltipster";
+
 .benefits {
   background: #f9fbfd;
   padding-top: 30px;
   padding-bottom: 15px;
+  $this: &;
 
   @media #{$m_tablet} {
     padding-top: 50px;
@@ -25,6 +28,19 @@
     text-align: center;
     margin-bottom: 20px;
     position: relative;
+    cursor: pointer;
+
+    &.tooltip-open {
+      #{$this}__item-title {
+        color: #1c4386;
+      }
+
+      #{$this}__icon {
+        svg circle {
+          fill-opacity: 0.5;
+        }
+      }
+    }
 
     @media #{$m-mobile--only} {
       &:not(:nth-child(2n + 2)) {
@@ -101,10 +117,104 @@
     flex-wrap: wrap;
     margin-top: 38px;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 
     @media #{$m_tablet} {
       margin-top: 55px;
       margin-bottom: 0;
+    }
+  }
+
+  &--animate {
+    #{$this}__list {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.tooltipster {
+  $this: &;
+
+  &-base {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 10px;
+      bottom: 0px;
+      left: 24px;
+      background-color: #8a9fc1;
+      z-index: 2;
+
+      @media #{$m-tablet} {
+        width: 40px;
+        height: 20px;
+        left: 30px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      bottom: -5px;
+      background-color: #8a9fc1;
+      transform: rotate(45deg);
+      border-radius: 2px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+      left: 50%;
+      margin-left: -6px;
+
+      @media #{$m-tablet} {
+        height: 24px;
+        border-radius: 5px;
+        bottom: -10px;
+        width: 24px;
+        margin-left: 0;
+        left: 38px;
+      }
+    }
+  }
+
+  &-arrow-right {
+    &::after {
+      @media #{$m-tablet} {
+        left: auto;
+        right: 38px;
+      }
+    }
+  }
+  &-box {
+    width: 175px;
+    padding: 14px 14px 14px 14px;
+    border-radius: 15px;
+    background-color: #8a9fc1;
+    overflow: hidden;
+    color: #ffff;
+    z-index: 4;
+
+    @media #{$m-mobile--wide} {
+      width: 250px;
+    }
+
+    @media #{$m-tablet} {
+      width: 315px;
+      padding: 16px 30px 16px 24px;
+    }
+  }
+
+  &-content {
+    overflow: hidden;
+    font-size: 11px;
+
+    line-height: 1.25em;
+
+    @media #{$m-tablet} {
+      font-size: 16px;
     }
   }
 }
