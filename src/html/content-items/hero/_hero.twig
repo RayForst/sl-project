@@ -11,13 +11,11 @@
                                         {% if slideMod is defined %}
                                             <span class="hero__id">ID 002</span>
                                             <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                            <span class="gallery-trigger"></span>
                                         {% else %}
                                             <h1 class="hero__title">Walking tours in Old Riga</h1>
                                             <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
                                             <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
                                         {% endif %}
-
                                     </div>
                                 </div>
 
@@ -29,9 +27,14 @@
                             <div class="hero__slide {% if slideMod is defined %} hero__slide--{{ slideMod }}{% endif %}">
                                 <div class="hero__slide-content">
                                     <div class="center">
-                                        <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
-                                        <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                                        {% if slideMod is defined %}
+                                            <span class="hero__id">ID 002</span>
+                                            <h1 class="hero__title">Walking tours in Old Riga</h1>
+                                        {% else %}
+                                            <h1 class="hero__title">Walking tours in Old Riga</h1>
+                                            <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                                            <a href="#" class="hero__button sl-button sl-button--big sl-button--wide sl-button--color-yellow">Uzzināt vairāk</a>
+                                        {% endif %}
                                     </div>
                                 </div>
 
@@ -57,12 +60,11 @@
 
                             </div>
                         </div>
-
                     </div> #}
                 {% endif %}
 
                 <!-- Add Pagination -->
-                <div class="hero__pagination">
+                <div class="hero__pagination{% if slideMod is defined %} hero__pagination--{{ slideMod }}{% endif %}">
                     <div class="center">
                         <div class="swiper-pagination"></div>
                     </div>

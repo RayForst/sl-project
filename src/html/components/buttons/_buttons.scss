@@ -16,6 +16,7 @@
   line-height: 1.25em;
   min-width: 135px;
   justify-content: center;
+  transition: background 0.4s ease, color 0.4s ease;
 
   $this: &;
 
@@ -27,6 +28,11 @@
   @media #{$m-desktop} {
     font-size: 20px;
     padding: 20px 43px;
+  }
+
+  &:hover {
+    background: #ffde49;
+    color: #000;
   }
 
   &--border {
@@ -48,6 +54,11 @@
       letter-spacing: 0.9px;
       font-size: 14px;
       padding: 14px 48px 15px 48px;
+    }
+
+    &:hover {
+      background: #1c4386;
+      color: #fff;
     }
   }
 
@@ -116,5 +127,10 @@
   &--color-yellow {
     background: #ffde49;
     color: #000;
+
+    &:hover {
+      background: #ffd100;
+      color: #000;
+    }
   }
 }

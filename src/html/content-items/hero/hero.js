@@ -11,13 +11,30 @@ const reinitContainer = () => {
 
 const enableSwiper = () => {
   reinitContainer()
-  const swiper = new Swiper('.hero .swiper-container', {
-    speed: 600,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  })
+
+  let swiper
+
+  if ($('.hero .hero__navigation-container').length) {
+    swiper = new Swiper('.hero .swiper-container', {
+      speed: 600,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.hero .swiper-button-next',
+        prevEl: '.hero .swiper-button-prev',
+      },
+    })
+  } else {
+    swiper = new Swiper('.hero .swiper-container', {
+      speed: 600,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    })
+  }
 
   swiper
     .on('slideChange', () => {

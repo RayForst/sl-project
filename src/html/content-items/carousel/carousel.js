@@ -32,7 +32,6 @@ const enableSwiper = () => {
       },
     },
   }).on('slideChange', () => {
-    console.log('change')
     lazyload.update()
   })
 
@@ -51,7 +50,6 @@ const enableSwiper = () => {
       },
     },
   }).on('slideChange', () => {
-    console.log('change 2')
     lazyload.update()
   })
 
@@ -62,7 +60,6 @@ const breakpointChecker = () => {
   const breakpoint = window.matchMedia('(min-width:768px)')
 
   if (false) {
-    console.log('destroy')
     // if larger viewport and multi-row layout needed
     if (breakpoint.matches !== true) {
       // clean up old instances and inline styles when available

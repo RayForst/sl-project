@@ -246,6 +246,11 @@
         display: block;
       }
     }
+
+    &--tour {
+      bottom: 68px;
+    }
+
     span.swiper-pagination-bullet {
       padding: 10px;
       opacity: 1;
@@ -284,6 +289,11 @@
     width: 54px;
     height: 54px;
     background-size: auto;
+    top: 0;
+  }
+
+  .swiper-button-next {
+    right: 84px;
   }
 
   .swiper-button-prev {
@@ -291,6 +301,10 @@
   }
 
   &__navigation-container {
+    position: relative;
+  }
+
+  &__navigation-outer {
     position: relative;
   }
 
@@ -303,7 +317,15 @@
   &__navigation-content {
     position: relative;
     position: absolute;
-    bottom: 53px;
+    bottom: 82px;
+    width: 100%;
+
+    .gallery-trigger {
+      position: absolute;
+      top: -22px;
+      right: 0;
+      z-index: 2;
+    }
   }
 }
 
