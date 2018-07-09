@@ -1,3 +1,35 @@
-<div>
-    Article tweets
+<div class="article-tweets">
+    <div class="article-tweets__heading">
+        <div class="article-tweets__title">
+            <img src="/img/content-items/social/tweets/twitter.svg" alt="">
+            <span>Tweets</span>
+        </div>
+
+        <a href="#" class="sl-button sl-button--small sl-button--color-blue">FOLLOW</a>
+    </div>
+    <div class="article-tweets__list">
+
+        {% for i in 1..7 %}
+
+            <a class="article-tweets__item" href="#">
+                <span class="article-tweets__author">
+                    <span class="article-tweets__logo">
+                        <img src="/img/content-items/social/tweets/twitter.svg" alt="" class="article-tweets__logo-placeholder">
+                    </span>
+
+                    <span class="article-tweets__author-details">
+                        <span class="article-tweets__name">Smile line day tours</span>
+                        <span class="article-tweets__nickname">@smileline_tours</span>
+                    </span>
+
+                    <span class="article-tweets__ago">20h</span>
+                </span>
+
+                <span class="article-tweets__text">Latvijai 100! Centenary anniversary of Latvia! On the 4th of May we will celebrate the signing…
+                    <span>https://www.instagram.com/p/BhtKdmcH3fb/</span></span>
+            </a>
+
+        {% endfor %}
+
+    </div>
 </div>

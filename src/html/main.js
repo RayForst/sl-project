@@ -8,9 +8,35 @@ import './content-items/social/tripadvisor/tripadvisor'
 import './content-items/benefits/benefits'
 import './content-items/hero/hero'
 import './content-items/carousel/carousel'
+import './content-items/news/article-body'
 import './components/calendar-item/calendar-item'
 import './components/input-number/input-number'
 
 $('body').on('click', 'a[href="#"]', e => e.preventDefault())
 
 window.addEventListener('load', retina)
+
+const $allVideos = $(
+  "iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], object, embed",
+)
+const $fluidEl = $('figure')
+
+$allVideos.each(function() {
+  console.log('on video loop')
+  $(this)
+    // jQuery .data does not work on object/embed elements
+    .attr('data-aspectRatio', this.height / this.width)
+    .removeAttr('height')
+    .removeAttr('width')
+})
+
+$(window)
+  .resize(function() {
+    console.log('inside resize')
+    const newWidth = $fluidEl.width()
+    $allVideos.each(function() {
+      const $el = $(this)
+      $el.width(newWidth).height(newWidth * $el.attr('data-aspectRatio'))
+    })
+  })
+  .resize()

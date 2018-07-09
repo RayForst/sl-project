@@ -35,6 +35,18 @@
     color: #000;
   }
 
+  &--small {
+    padding: {
+      top: 9px;
+      bottom: 7px;
+      left: 15px;
+      right: 15px;
+    }
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    min-width: 108px;
+  }
+
   &--border {
     color: #1c4386;
     border: solid 2px currentColor;
@@ -131,6 +143,16 @@
     &:hover {
       background: #ffd100;
       color: #000;
+    }
+  }
+
+  &--color-blue {
+    background: #1fa3df;
+    color: #fff;
+
+    &:hover {
+      background: #1382b5;
+      color: #fff;
     }
   }
 }

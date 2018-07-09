@@ -27,7 +27,7 @@
                     {% endfor %}
                 </div>
 
-                <div class=" hero__navigation-container">
+                <div class="hero__navigation-container">
                     <div class="center">
                         <div class="hero__navigation-outer">
                             <div class="hero__navigation-inner">
@@ -50,6 +50,42 @@
                     </div>
                 </div>
 
+            </div>
+        {% elseif slideMod is defined and slideMod == 'news-article' %}
+            <div class="hero__slide hero__slide--no-button">
+                <div class="hero__slide-content">
+                    <div class="center">
+                        <h1 class="hero__title">Walking tours in Old Riga</h1>
+                    </div>
+                </div>
+
+                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img3.jpg');"></span>
+            </div>
+
+            <div class="hero__navigation-container">
+                <div class="center">
+                    <div class="hero__navigation-outer">
+                        <div class="hero__navigation-inner">
+                            <div class="hero__navigation-content">
+                                <div class="hero__navigation-controls">
+                                    <div class="content-button content-prev">
+                                        <div class="title">
+                                            Previous Post
+                                        </div>
+
+                                        <div class="post-title">Overdraft escape route</div>
+                                    </div>
+                                    <div class="content-button content-next">
+                                        <div class="title">
+                                            Next Post
+                                        </div>
+                                        <div class="post-title">Overdraft escape route</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         {% elseif noswiper is not defined %}
             <div class="swiper-container">

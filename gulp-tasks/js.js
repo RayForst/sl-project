@@ -24,7 +24,7 @@ module.exports = function(gulp, plugins, options) {
   return plugins
     .multipipe(
       gulp.src(options.src, {}),
-      plugins.eslint(),
+      // plugins.eslint(),
       plugins.webpack(
         {
           entry: {
@@ -42,7 +42,7 @@ module.exports = function(gulp, plugins, options) {
               {
                 test: /\.js$/,
                 exclude: [/html\/vendors/, /(node_modules|bower_components)/],
-                loaders: ['babel-loader?presets[]=es2015', 'eslint-loader'],
+                loaders: ['babel-loader?presets[]=es2015'],
               },
             ],
           },

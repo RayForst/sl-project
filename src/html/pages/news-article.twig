@@ -1,13 +1,13 @@
 {% extends "_layout.twig" %}
 
-{% block title %}News Article - {{ parent() }}{% endblock %}
-
+{% block title %}News Article -
+    {{ parent() }}
+{% endblock %}
 
 {% block content %}
-    {% include "content-items/hero/_hero.twig" %}
+    {% include "content-items/hero/_hero.twig"  with { slideMod: 'news-article' } %}
     {% include "content-items/news/_article-body.twig" %}
-    {% include "content-items/social/tweets/_article-tweets.twig" %}
+    {% include "content-items/social/tweets/_tweets.twig" with { mod: 'hide-on-desktop' } %}
     {% include "content-items/social/instagram/_instagram.twig" %}
     {% include "content-items/social/tripadvisor/_tripadvisor.twig" %}
 {% endblock %}
-

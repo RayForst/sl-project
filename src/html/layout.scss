@@ -84,6 +84,7 @@ body {
 @import "content-items/book/_book";
 @import "content-items/social/instagram/_instagram";
 @import "content-items/social/tweets/_tweets";
+@import "content-items/social/tweets/_article-tweets";
 @import "content-items/social/tripadvisor/_tripadvisor";
 @import "content-items/offer/_offer";
 @import "content-items/benefits/_benefits";
@@ -91,6 +92,7 @@ body {
 @import "content-items/contacts/_contacts";
 @import "content-items/tour/_list";
 @import "content-items/tour/tour-body";
+@import "content-items/news/article-body";
 @import "content-items/news/_list";
 @import "content-items/book-form/_book-form";
 @import "content-items/calendar-list/_calendar-list";
@@ -113,4 +115,14 @@ body {
       transform: scale(1.1);
     }
   }
+}
+
+// iframe {
+//   width: 100% !important;
+//   height: auto !important;
+// }
+
+
+figure {
+  margin: 2em 0;
 }

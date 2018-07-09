@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   @import "swiper/dist/css/swiper.min";
 
   .swiper-slide {
@@ -396,6 +397,77 @@
 
 .hero {
   .swiper-slide {
+  }
+}
+
+.content-button {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  user-select: none;
+
+  @media #{$m-tablet} {
+    bottom: 0;
+  }
+  &:after {
+    content: "";
+    width: 7.1px;
+    height: 10px;
+    background-image: url("/img/content-items/news/arrow-previous.svg");
+    background-size: cover;
+
+    position: absolute;
+
+    top: 4px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1em;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffde49;
+    margin-bottom: 10px;
+  }
+
+  .post-title {
+    opacity: 0.66;
+    font-size: 14px;
+    line-height: 1em;
+    color: #ffffff;
+    transition: opacity 0.4s linear;
+  }
+
+  &:hover {
+    .post-title {
+      opacity: 1;
+    }
+  }
+
+  &.content-prev {
+    left: 0;
+    padding-left: 20px;
+
+    &:after {
+      left: 0;
+    }
+  }
+
+  &.content-next {
+    right: 0;
+    padding-right: 20px;
+
+    align-items: flex-end;
+
+    &:after {
+      right: 0;
+      transform: rotate(180deg);
+    }
   }
 }
 

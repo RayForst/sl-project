@@ -1,4 +1,4 @@
-.tour-body {
+.article-body {
   padding: {
     top: 50px;
     bottom: 80px;
@@ -6,15 +6,22 @@
 
   &__center {
     position: relative;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__description {
     width: 100%;
     padding: 0;
+    display: none;
 
     @media #{$m-tablet--wide} {
       width: calc(100% - 400px);
       padding-right: 58px;
+    }
+
+    &.active {
+      display: block;
     }
   }
   &__paragraph {
@@ -35,23 +42,6 @@
     @media #{$m-tablet--wide} {
       font-size: 22px;
       line-height: 1.45em;
-    }
-  }
-
-  &__form {
-    width: 309px;
-    border-radius: 14px;
-    background-color: rgba(#1c4386, 0.9);
-    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.19);
-    height: 753px;
-    z-index: 2;
-    margin: auto;
-    margin-top: 39px;
-
-    @media #{$m-tablet--wide} {
-      position: absolute;
-      bottom: 0;
-      right: 0;
     }
   }
 }

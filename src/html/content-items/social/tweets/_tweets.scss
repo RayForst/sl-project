@@ -16,6 +16,12 @@
     }
   }
 
+  &--hide-on-desktop {
+    @media #{$m-tablet--wide} {
+      display: none;
+    }
+  }
+
   &__heading {
     font-size: 21px;
     line-height: 1.05em;
@@ -45,9 +51,8 @@
       content: "";
       width: 14.7px;
       height: 12.05px;
-      opacity: 0.22;
-      background-color: #55acee;
-      background-image: url("/img/content-items/social/tweets/tweet.svg");
+      background-image: url("/img/content-items/social/tweets/twitter.svg");
+      background-size: cover;
 
       position: absolute;
       right: 15px;
