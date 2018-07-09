@@ -36,15 +36,18 @@ const enableSwiper = () => {
     })
   }
 
-  swiper
-    .on('slideChange', () => {
-      console.log('change', arguments)
-    })
-    .on('transitionEnd', () => {
-      // console.log('transitionEnd', arguments, swiper.activeIndex)
-      $('.swiper-slide-animation').removeClass('swiper-slide-animation')
-      $('.hero .swiper-slide-active').addClass('swiper-slide-animation')
-    })
+  if (swiper) {
+    console.log(swiper)
+    swiper
+      .on('slideChange', () => {
+        console.log('change', arguments)
+      })
+      .on('transitionEnd', () => {
+        // console.log('transitionEnd', arguments, swiper.activeIndex)
+        $('.swiper-slide-animation').removeClass('swiper-slide-animation')
+        $('.hero .swiper-slide-active').addClass('swiper-slide-animation')
+      })
+  }
 
   return swiper
 }

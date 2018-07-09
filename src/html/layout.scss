@@ -95,7 +95,16 @@ body {
 @import "content-items/book-form/_book-form";
 @import "content-items/calendar-list/_calendar-list";
 
-.swiper-button-prev,
+.swiper-button-prev {
+  &:not(.swiper-button-disabled) {
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: scale(1.1) rotate(180deg);
+    }
+  }
+}
+
 .swiper-button-next {
   &:not(.swiper-button-disabled) {
     transition: transform 0.2s linear;

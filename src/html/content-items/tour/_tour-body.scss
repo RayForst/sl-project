@@ -12,7 +12,7 @@
     width: 100%;
     padding: 0;
 
-    @media #{$m_tablet} {
+    @media #{$m-tablet--wide} {
       width: calc(100% - 400px);
       padding-right: 58px;
     }
@@ -29,6 +29,10 @@
     }
 
     @media #{$m_tablet} {
+      font-size: 18px;
+    }
+
+    @media #{$m-tablet--wide} {
       font-size: 22px;
       line-height: 1.45em;
     }
@@ -45,7 +49,7 @@
     margin: auto;
     margin-top: 39px;
 
-    @media #{$m_tablet} {
+    @media #{$m-tablet--wide} {
       position: absolute;
       bottom: 0;
       right: 0;

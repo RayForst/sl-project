@@ -126,7 +126,11 @@
     z-index: 2;
     position: relative;
     height: 100%;
+    width: 100%;
 
+    &--tour {
+      position: absolute;
+    }
     @media #{$m-mobile--only} {
       z-index: 2;
       position: absolute;
@@ -248,7 +252,14 @@
     }
 
     &--tour {
-      bottom: 68px;
+      bottom: 18px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+
+      & > .center {
+        display: flex;
+      }
     }
 
     span.swiper-pagination-bullet {
@@ -285,46 +296,100 @@
   .swiper-container-rtl .swiper-butt on-next,
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
-    background-image: url("/img/content-items/social/tripadvisor/right-trip.svg");
-    width: 54px;
-    height: 54px;
+    background-image: url("/img/content-items/social/instagram/right-small.svg");
+    width: 34px;
+    height: 34px;
     background-size: auto;
-    top: 0;
+    top: 10px;
+    margin: 0;
+
+    @media #{$m-tablet} {
+      background-image: url("/img/content-items/social/instagram/right-big.svg");
+      width: 54px;
+      height: 54px;
+      top: 0;
+    }
   }
 
   .swiper-button-next {
-    right: 84px;
+    right: 0px;
   }
 
   .swiper-button-prev {
     transform: rotate(180deg);
+    left: 0;
   }
 
   &__navigation-container {
     position: relative;
+    height: 54px;
+    width: 100%;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    z-index: 2;
+
+    & > .center {
+      height: 100%;
+    }
+
+    @media (min-width: 450px) {
+      width: 76%;
+      margin-left: 12%;
+    }
+
+    @media #{$m-tablet} {
+      bottom: 50px;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 
   &__navigation-outer {
-    position: relative;
+    height: 100%;
+    width: 100%;
   }
 
   &__navigation-inner {
     position: relative;
-    width: calc(100% - 400px);
-    padding-right: 58px;
+    width: 100%;
+    height: 100%;
+
+    @media #{$m-tablet--wide} {
+      width: calc(100% - 400px);
+      padding-right: 58px;
+    }
   }
 
   &__navigation-content {
-    position: relative;
-    position: absolute;
-    bottom: 82px;
-    width: 100%;
+    height: 100%;
+    display: flex;
+  }
 
-    .gallery-trigger {
-      position: absolute;
-      top: -22px;
-      right: 0;
-      z-index: 2;
+  &__navigation-controls {
+    width: 100%;
+    position: relative;
+  }
+
+  .gallery-trigger {
+    display: inline-flex;
+    margin-left: 10px;
+    display: none;
+
+    svg {
+      margin-top: 10px;
+      width: 34px;
+      height: 34px;
+    }
+
+    @media #{$m-tablet} {
+      margin-left: 30px;
+
+      svg {
+        margin-top: 0;
+        width: 54px;
+        height: 54px;
+      }
     }
   }
 }
