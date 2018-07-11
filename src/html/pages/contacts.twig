@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    {% include "content-items/hero/_hero.twig" %}
+    {% include "content-items/hero/_hero.twig" with {noswiper: true, nodesc: true }%}
     {% include "content-items/contacts/_contacts.twig" %}
     {% include "content-items/social/instagram/_instagram.twig" %}
     {% include "content-items/social/tweets/_tweets.twig" %}

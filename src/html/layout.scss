@@ -117,12 +117,13 @@ body {
   }
 }
 
-// iframe {
-//   width: 100% !important;
-//   height: auto !important;
-// }
-
-
 figure {
   margin: 2em 0;
+}
+
+.ui-widget {
+  font-family: "ProximaNova", sans-serif;
+  .ui-menu-item-wrapper {
+    text-transform: capitalize;
+  }
 }

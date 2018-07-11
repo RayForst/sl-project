@@ -133,7 +133,9 @@
                 <div class="hero__slide-content">
                     <div class="center">
                         <h1 class="hero__title">Walking tours in Old Riga</h1>
-                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                        {% if nodesc is not defined %}
+                            <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
+                        {% endif %}
                     </div>
                 </div>
 

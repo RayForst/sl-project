@@ -1,2 +1,55 @@
 .calendar-list {
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  @media #{$m-tablet} {
+    padding-top: 42px;
+    padding-bottom: 59px;
+  }
+}
+
+.month-select {
+  position: relative;
+  padding: 0 64px;
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  margin-top: 20px;
+  text-transform: uppercase;
+
+  @media #{$m-tablet} {
+    margin-top: 40px;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    background-image: url(/img/content-items/social/instagram/right-small.svg);
+    width: 34px;
+    height: 34px;
+    background-size: auto;
+    top: 0;
+    margin-top: 0;
+    display: inline-flex;
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  &:before {
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &:after {
+    right: 0;
+  }
+  &__month {
+    font-family: ProximaNova;
+    font-size: 18px;
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+    color: rgba(#262d7e, 0.9);
+  }
 }

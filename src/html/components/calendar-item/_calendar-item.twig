@@ -1,3 +1,142 @@
 <div class="calendar-item">
-    {{ item.title }}
+    <div class="calendar-item__date calendar-date">
+        <div class="calendar-date__month">Sep</div>
+        <div class="calendar-date__day">17</div>
+        <div class="calendar-date__day-of-week">Thu</div>
+    </div>
+    <div class="calendar-item__content">
+        <div class="calendar-item__title">
+            {{ item.title }}
+        </div>
+
+        <div class="calendar-item__full-date">
+            Sep 7 @ 11:00 – 14:00
+        </div>
+
+        <div class="calendar-item__slide-content">
+            <div class="calendar-item__slide-content-inner">
+                <div class="calendar-item__image-wrap">
+                    <img src="http://via.placeholder.com/300x143" alt="">
+                </div>
+
+                <div class="calendar-item__tour-description">
+                    <strong>Jurmala sightseeing</strong><br>
+                    Jurmala sightseeing. Jurmala is a seaside resort situated just 20 km from Riga. The natural curative features of this place were already well known more than 150 years ago. Nowadays golden beaches, blue sea, fresh air and the unique beauty of pine forests attract tourists from all over the world. You can see wooden country houses of the beginning of the 20th century alongside with modern cottages there.
+                </div>
+
+                <div class="calendar-item__info calendar-info">
+                    <div class="calendar-info__title">Info</div>
+                    <div class="calendar-info__details">
+                        <div class="calendar-info__details-item">
+                            <div class="calendar-info__detail-title">Type</div>
+                            <div class="calendar-info__detail-value">Walking + bus</div>
+                        </div>
+
+                        <div class="calendar-info__details-item">
+                            <div class="calendar-info__detail-title">Tour lasts</div>
+                            <div class="calendar-info__detail-value">3h</div>
+                        </div>
+
+                        <div class="calendar-info__details-item">
+                            <div class="calendar-info__detail-title">Price per person</div>
+                            <div class="calendar-info__detail-value">25 € *</div>
+                        </div>
+                    </div>
+
+                    <div class="calendar-info__title">Book This Tour</div>
+
+                    <form class="float-label calendar-item__book-form">
+                        <div class="calendar-item__fieldset-wrap">
+                            <fieldset>
+                                <div class="static-control">
+                                    <div class="static-label static-label--dark static-label--calendar-date">
+                                        PREFERRED TOUR DATE
+                                    </div>
+
+                                    <div class="date-wrap">
+                                        <div class="date-select">
+                                            <div class="date-placeholder date-placeholder--dark">
+                                                <span class="placeholder day">day</span>
+                                                <span class="placeholder month">month</span>
+                                                <span class="placeholder year">year</span>
+                                            </div>
+
+                                            <img src="/img/content-items/book-form/calendar.svg" class="date-calendar-icon" alt="">
+                                        </div>
+
+                                        <input type="text" name="date" class="date-input" data-theme="smileline" data-format="d.m.Y" data-min-year="2018" data-large-mode="true">
+                                    </div>
+                                </div>
+
+                                <div class="control control--theme-dark-full">
+                                    <input type="text" name="name" id="name" placeholder="NAME, LASTNAME" required="required">
+                                    <label for="name">NAME, LASTNAME</label>
+                                </div>
+
+                                <div class="control control--theme-dark-full">
+                                    <input type="email" name="email" id="email" placeholder="E-MAIL" required="required">
+                                    <label for="email">E-MAIL</label>
+                                </div>
+
+                                <div class="control control--theme-dark-full">
+                                    <input type="text" name="phone" id="phone" placeholder="PHONE NUMBER" required="required">
+                                    <label for="phone">PHONE NUMBER</label>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+
+                                <div class="book-form__double-wrap">
+                                    <div class="static-control">
+                                        <div class="static-label static-label--calendar-lang static-label--dark">
+                                            LANGUAGE
+                                        </div>
+
+                                        <div class="select-wrap">
+                                            <select name="language" class="language-select">
+                                                <option>english</option>
+                                                <option>latvian</option>
+                                                <option>russian</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="static-control">
+                                        <div class="static-label static-label--dark static-label--calendar-people">
+                                            Number of people
+                                        </div>
+
+                                        {% include 'components/input-number/_input-number.twig' with { name: 'people', mod: 'dark' } %}
+                                    </div>
+
+                                </div>
+
+                                <textarea name="comment" class="calendar-item__textarea" placeholder="Additional comments and requests" cols="30" rows="6"></textarea>
+                            </fieldset>
+                        </div>
+
+                        <div class="calendar-item__submit">
+                            <button type="submit" class="sl-button sl-button--wide sl-button--color-yellow sl-button--big">SUBMIT</button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="calendar-item__reservation-info">
+                    <div class="calendar-item__reservation-info-title">For reservations please fill out the booking form below or contact us by:</div>
+                    {% include "components/contact-requisites/_contact-requisites.twig" with { mod: ' contact-requisites--calendar' } only %}
+                </div>
+                <div class="calendar-item__office">
+                    <div class="calendar-item__office-title">Or come to our office:</div>
+                    <div class="calendar-item__office-addr">Rātslaukums 7, Rīga, LV-1050</div>
+                </div>
+                <div class="calendar-item__reservation">
+                    <p>*Reservations are not confirmed until we have sent you a confirmation.</p>
+                    <b>Cancelation policy</b><br>
+                    <p>You can cancel your booking free of charge no later than 7 days prior to the day of the tour. In case of cancellation 6 to 3 days prior this tour, a fine of half the price of the tour price is charged. In case of late cancellation (2 to 1 day), as well as in case of non-arrival, a penalty is charged in the amount of the full cost of the excursion.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-item__open-toggle"></div>
+    </div>
 </div>

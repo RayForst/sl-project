@@ -7,6 +7,7 @@
     background: transparent;
     padding: 0;
     text-align: center;
+    border: none;
   }
 
   .quantity-select__control {
@@ -29,5 +30,11 @@
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  &--dark {
+    .quantity-select__input {
+      color: #1c4386;
+    }
   }
 }

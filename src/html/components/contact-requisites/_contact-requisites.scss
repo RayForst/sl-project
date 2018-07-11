@@ -134,9 +134,20 @@
       }
     }
   }
+
   &--footer {
     @media #{$m_desktop} {
       flex-direction: column;
+    }
+  }
+
+  &--calendar {
+    flex-direction: column;
+    display: flex;
+    padding: 21px 0 27px 0;
+
+    @media #{$m-tablet} {
+      flex-direction: row;
     }
   }
 }
