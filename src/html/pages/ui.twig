@@ -5,93 +5,94 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Pages
-    </h1>
+    <section class="demo-ui-content">
+        <div class="page-list">
+            <h1>Site Pages
+            </h1>
 
-    <ul>
-        <li>
-            <a href="/index.html">Main</a>
-        </li>
-        <li>
-            <a href="/catalogue.html">Tour catalogue</a>
-        </li>
-        <li>
-            <a href="/tour.html">Tour</a>
-        </li>
-        <li>
-            <a href="/news.html">News</a>
-        </li>
-        <li>
-            <a href="/news-article.html">News article</a>
-        </li>
-        <li>
-            <a href="/contacts.html">Contacts</a>
-        </li>
-    </ul>
-
-    <div class="component">
-        <h1>Buttons</h1>
-
-        <div class="mode">
-            <h2>default</h2>
-            <button class="sl-button">Button text</button>
-
+            <ul>
+                <li>
+                    <a href="/index.html">Main</a>
+                </li>
+                <li>
+                    <a href="/catalogue.html">Tour catalogue</a>
+                </li>
+                <li>
+                    <a href="/tour.html">Tour</a>
+                </li>
+                <li>
+                    <a href="/news.html">News</a>
+                </li>
+                <li>
+                    <a href="/news-article.html">News article</a>
+                </li>
+                <li>
+                    <a href="/contacts.html">Contacts</a>
+                </li>
+            </ul>
         </div>
 
-        <div class="mode">
-            <h2>default</h2>
-            <button class="sl-button sl-button--medium">Button text</button>
+        <div class="component-list">
+            <div class="component">
+                <h1>Buttons</h1>
 
+                <div>
+                    <h2>Default CA button</h2>
+                    <div>
+                        <a href="#" class="sl-ca sl-ca--small">Small button</a>
+                        <a href="#" class="sl-ca">Regular button</a>
+                        <a href="#" class="sl-ca sl-ca--big">Big button</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="sl-ca sl-ca--c-orange sl-ca--small">Small button</a>
+                        <a href="#" class="sl-ca sl-ca--c-orange">Regular button</a>
+                        <a href="#" class="sl-ca sl-ca--c-orange sl-ca--big">Big button</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Bordered CA button</h2>
+                    <div>
+                        <a href="#" class="sl-ca-border sl-ca-border--small">Small button</a>
+                        <a href="#" class="sl-ca-border">Regular button</a>
+                        <a href="#" class="sl-ca-border sl-ca-border--big">Big button</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Custom</h2>
+                    <div>
+                                <a href="#" class="sl-button sl-button--small sl-button--color-blue">FOLLOW</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="component">
+                <h1>contact-requisites</h1>
+
+                <div class="mode">
+                    <h2>
+                        default</h2>
+
+                    {% include "components/contact-requisites/_contact-requisites.twig" %}
+
+                </div>
+                <div class="mode">
+                    <h2>--header</h2>
+
+                    {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--header' } only %}
+
+                </div>
+
+                <div class="mode">
+                    <h2>--footer</h2>
+                    {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--footer' } only %}
+
+                </div>
+            </div>
         </div>
-
-        <div class="mode">
-            <h2>--arrow</h2>
-            <button class="sl-button sl-button--arrow">Button text
-                <i class="sl-button__icon rounded-triangle"></i>
-            </button>
-
-        </div>
-
-        <div class="mode">
-            <h2>--wide default</h2>
-            <button class="sl-button sl-button--wide sl-button--color-yellow">Button text</button>
-
-        </div>
-
-        <div class="mode">
-            <h2>--wide --big</h2>
-            <button class="sl-button sl-button--wide sl-button--color-yellow sl-button--big">Button text</button>
-
-        </div>
-
-        <div class="mode">
-            <h2>border --border</h2>
-            <button class="sl-button sl-button--border">Button text</button>
-        </div>
-    </div>
-
-    <div class="component">
-        <h1>contact-requisites</h1>
-
-        <div class="mode">
-            <h2>
-                default</h2>
-
-            {% include "components/contact-requisites/_contact-requisites.twig" %}
-
-        </div>
-        <div class="mode">
-            <h2>--header</h2>
-
-            {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--header' } only %}
-
-        </div>
-
-        <div class="mode">
-            <h2>--footer</h2>
-            {% include "components/contact-requisites/_contact-requisites.twig" with { mod : ' contact-requisites--footer' } only %}
-
-        </div>
-    </div>
+    </section>
 
 {% endblock %}

@@ -21,6 +21,64 @@
         {% endblock %}
 
         <script src="/js/main.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script>
+            swal({
+                title: 'Get notified for the latest sale offers!',
+                text: 'I will send you push notifications Sounds good?!',
+                buttons: { catch  : {
+                        text : 'Yes, I want it!',
+                        value: 'catch',
+                        className: 'sl-ca sl-ca--small'
+                    },
+                    default: {
+                        text: 'Not now',
+                        className: 'sl-ca-border sl-ca-border--small'
+                    }
+                },
+                className: 'swal-noty'
+            }).then((value) => {
+                switch (value) {
+                    case 'defeat':
+                        swal('Pikachu fainted! You gained 500 XP!')
+                        break
+
+                    case 'catch':
+                        swal('Subscribed!', 'You have successfully subscribed to the newsletter.', 'success')
+                        break
+
+                    default:
+                }
+            })
+            swal({
+                title: 'Get notified for the latest sale offers!',
+                text: 'I will send you push notifications Sounds good?!',
+                buttons: { catch  : {
+                        text : 'Yes, I want it!',
+                        value: 'catch',
+                        className: 'sl-ca sl-ca--small'
+                    },
+                    default: {
+                        text: 'Not now',
+                        className: 'sl-ca-border sl-ca-border--small'
+                    }
+                },
+                className: 'swal-noty'
+            }).then((value) => {
+                switch (value) {
+                    case 'defeat':
+                        swal('Pikachu fainted! You gained 500 XP!')
+                        break
+
+                    case 'catch':
+                        swal('Subscribed!', 'You have successfully subscribed to the newsletter.', 'success')
+                        break
+
+                    default:
+                }
+            })
+        </script>
         {% block script %}{% endblock %}
     </body>
 </html>

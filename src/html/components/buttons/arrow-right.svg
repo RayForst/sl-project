@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="8px" viewBox="0 0 7 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="arrow-right-website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06-smile-line-contacts" transform="translate(-1253.000000, -2423.000000)" fill="#FFFFFF">
+            <g id="arrow-right" transform="translate(0.000000, 1985.000000)">
+                <g id="arrow-right-11" transform="translate(0.000000, 334.000000)">
+                    <g id="arrow-right" transform="translate(1253.000000, 104.000000)">
+                        <path d="M0.125760164,2.66288921 C-0.486498735,1.74450086 -0.0834914283,1 1.02116666,1 L6.57273886,1 C7.67951711,1 8.08322006,1.74027715 7.46814535,2.66288921 L4.90554556,6.50678889 C4.29328666,7.42517724 3.30343466,7.42940095 2.68835995,6.50678889 L0.125760164,2.66288921 Z" transform="translate(3.796058, 4.000000) rotate(-90.000000) translate(-3.796058, -4.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -93,6 +93,7 @@ body {
 @import "content-items/tour/_list";
 @import "content-items/tour/tour-body";
 @import "content-items/news/article-body";
+@import "content-items/notify-popup/notify-popup";
 @import "content-items/news/_list";
 @import "content-items/book-form/_book-form";
 @import "content-items/calendar-list/_calendar-list";
@@ -125,5 +126,47 @@ figure {
   font-family: "ProximaNova", sans-serif;
   .ui-menu-item-wrapper {
     text-transform: capitalize;
+  }
+}
+
+.demo-ui-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .component-list {
+    width: 100%;
+    padding: 40px;
+    border: 1px solid #eeeeee8f;
+    margin: 20px 40px;
+
+    .sl-ca {
+      margin: 10px 0;
+    }
+  }
+
+  .page-list {
+    padding: 40px 20px;
+    margin: 0 20px;
+    width: 250px;
+
+    a {
+      font-family: "ProximaNova", sans-serif;
+      text-decoration: none;
+      color: #666;
+
+      &:hover {
+        text-decoration: underline;
+      }
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 1.34em;
+    }
+
+    li {
+      list-style: none;
+    }
   }
 }

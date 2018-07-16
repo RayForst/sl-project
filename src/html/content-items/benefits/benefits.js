@@ -29,19 +29,23 @@ $('.tooltip').tooltipster({
   },
   functionPosition(instance, helper, position) {
     const newPosition = position
+    const tooltipW = 315
+    const triggerW = 90
 
     const width =
       window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
 
+    const hasSpaceInRight = position.coord.left + tooltipW + triggerW > width
+
     if (width >= 760) {
       newPosition.coord.top -= 17
 
-      if (newPosition.coord.left + 315 > width - 100) {
-        newPosition.coord.left -= 100
+      if (hasSpaceInRight) {
+        newPosition.coord.left -= 107
+        $(helper.tooltip).addClass('tooltipster-arrow-right')
       } else {
-        newPosition.coord.left += 105
+       newPosition.coord.left += 108
       }
-      $(helper.tooltip).addClass('tooltipster-arrow-right')
     } else {
       newPosition.coord.top -= 8
     }
@@ -50,7 +54,7 @@ $('.tooltip').tooltipster({
   },
 })
 
-$.tooltipster.on('created', (event) => {
+$.tooltipster.on('created', event => {
   const elem = $(event.origin)
 
   $('.tooltip-open').removeClass('tooltip-open')

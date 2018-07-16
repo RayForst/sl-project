@@ -20,7 +20,6 @@ const enableSwiper = () => {
 const breakpointChecker = () => {
   if (!$('.tripadvisor').length) return false
 
-  console.log('breakpoint checkeer')
   const breakpoint = window.matchMedia('(min-width:768px)')
   // if larger viewport and multi-row layout needed
   if (breakpoint.matches !== true) {
