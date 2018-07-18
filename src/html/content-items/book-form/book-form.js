@@ -26,7 +26,7 @@ function changePrice() {
 		data: $form.serialize(),
 		success: function(result) {
 			if (typeof result.price != 'undefined' && result.price) {
-				$form.attr('data-price', result.price)
+				$form.data('price', result.price)
 				changeTotalAmount()
 			}
 		}
