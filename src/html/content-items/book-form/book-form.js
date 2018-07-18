@@ -8,14 +8,14 @@ $('#number').selectmenu()
 $('#language').selectmenu()
 
 const setDatePlaceholder = (value) => {
-  const date = value.split('.')
-  const day = date[0]
-  const month = date[1]
-  const year = date[2]
+	const date = value.split('.')
+	const day = date[0]
+	const month = date[1]
+	const year = date[2]
 
-  $('.placeholder.day').text(parseInt(day, 10))
-  $('.placeholder.month').text(parseInt(month, 10))
-  $('.placeholder.year').text(year)
+	$('.placeholder.day').text(parseInt(day, 10))
+	$('.placeholder.month').text(parseInt(month, 10))
+	$('.placeholder.year').text(year)
 }
 
 function changePrice() {
@@ -25,17 +25,17 @@ function changePrice() {
 		dataType : 'json',
 		data: $form.serialize(),
 		success: function(result) {
-			if (typeof result.saved != 'undefined' && result.saved) {
-				console.log(result);
+			if (typeof result.price != 'undefined' && result.price) {
+				$form.attr('data-price', result.price)
+				changeTotalAmount()
 			}
-
 		}
 	})
 }
 
 $('#date').on('change', (e) => {
-    const value = $(e.currentTarget).val()
-    setDatePlaceholder(value)
+	const value = $(e.currentTarget).val()
+	setDatePlaceholder(value)
 	changePrice()
 })
 
@@ -48,15 +48,14 @@ $('#language').on("selectmenuchange", function( event, ui ) {
 })
 
 $('.date-placeholder').on('click', () => {
-  $('#date').click()
+	$('#date').click()
 })
 
 function changeTotalAmount(e) {
-  const peopleCount = parseInt($(e.currentTarget).val(), 10)
-  const priceForOne = parseInt($form.data('price'), 10)
-  const tourCurrency = $form.data('currency')
-
-  $('.book-form__total', $form).text(`${priceForOne * peopleCount}${tourCurrency}`)
+	const peopleCount = e ? parseInt($(e.currentTarget).val(), 10) : parseInt($('input[name="people"]').val())
+	const priceForOne = parseInt($form.data('price'), 10)
+	const tourCurrency = $form.data('currency')
+	$('.book-form__total', $form).text(`${priceForOne * peopleCount}${tourCurrency}`)
 }
 
-$('input[type="people"]', $form).on('change', changeTotalAmount)
+$('input[name="people"]', $form).on('change', changeTotalAmount)
