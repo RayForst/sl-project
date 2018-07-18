@@ -18,9 +18,33 @@ const setDatePlaceholder = (value) => {
   $('.placeholder.year').text(year)
 }
 
+function changePrice() {
+	$.ajax({
+		type : 'POST',
+		url : $form.attr('data-price-action'),
+		dataType : 'json',
+		data: $form.serialize(),
+		success: function(result) {
+			if (typeof result.saved != 'undefined' && result.saved) {
+				console.log(result);
+			}
+
+		}
+	})
+}
+
 $('#date').on('change', (e) => {
-  const value = $(e.currentTarget).val()
-  setDatePlaceholder(value)
+    const value = $(e.currentTarget).val()
+    setDatePlaceholder(value)
+	changePrice()
+})
+
+$('#number').on("selectmenuchange", function( event, ui ) {
+	changePrice()
+})
+
+$('#language').on("selectmenuchange", function( event, ui ) {
+	changePrice()
 })
 
 $('.date-placeholder').on('click', () => {
