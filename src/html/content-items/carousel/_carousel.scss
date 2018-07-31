@@ -108,9 +108,13 @@
 
     #{$this}__item-subline {
       display: block;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       opacity: 0;
       transition: opacity 0.5s ease;
+
+      @media #{$m-tablet} {
+        margin-bottom: 40px;
+      }
     }
     #{$this}__button {
       display: block;
@@ -163,7 +167,7 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    padding: 20px;
+    padding: 12px 20px 20px 20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -171,7 +175,7 @@
     transition: transform 0.5s ease;
 
     @media #{$m-tablet} {
-      padding: 54px 57px;
+      padding: 32px 57px 54px 57px;
     }
   }
 
@@ -199,7 +203,7 @@
     display: none;
 
     @media #{$m_tablet} {
-      bottom: 37px;
+      bottom: 32px;
     }
   }
 
