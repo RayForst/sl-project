@@ -1,6 +1,7 @@
 @import "normalize/import-now";
 @import "variables";
 @import "components/fonts/fonts";
+@import "lightbox2/src/css/lightbox";
 
 html {
   height: 100%;
@@ -76,6 +77,7 @@ body {
 @import "components/datepicker/_datepicker";
 @import "components/dropdown/_dropdown";
 @import "components/calendar-item/_calendar-item";
+@import "components/hidden-gallery/_hidden-gallery";
 
 @import "content-items/header/_header";
 @import "content-items/hero/_hero";

@@ -1,162 +1,3 @@
-.sl-button {
-  border-radius: 35px;
-  background-color: #f5a623;
-  font-weight: bold;
-  letter-spacing: 0;
-  text-align: left;
-  color: #ffffff;
-  border: none;
-  padding: 13px 22px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  display: inline-flex;
-  position: relative;
-  align-items: center;
-  line-height: 1.25em;
-  min-width: 135px;
-  justify-content: center;
-  transition: background 0.4s ease, color 0.4s ease;
-
-  $this: &;
-
-  @media #{$m-tablet} {
-    padding: 16px 32px;
-    font-size: 17px;
-  }
-
-  @media #{$m-desktop} {
-    font-size: 20px;
-    padding: 20px 43px;
-  }
-
-  &:hover {
-    background: #ffde49;
-    color: #000;
-  }
-
-  &--small {
-    padding: {
-      top: 9px;
-      bottom: 7px;
-      left: 15px;
-      right: 15px;
-    }
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    min-width: 108px;
-  }
-
-  &--border {
-    color: #1c4386;
-    border: solid 2px currentColor;
-    background: transparent;
-    text-transform: uppercase;
-    padding: 8px 31px;
-    font-size: 12px;
-    letter-spacing: 1.5px;
-
-    @media #{$m-tablet} {
-      font-size: 13px;
-      letter-spacing: 1.2px;
-      padding: 12px 39px;
-    }
-
-    @media #{$m-desktop} {
-      letter-spacing: 0.9px;
-      font-size: 14px;
-      padding: 14px 48px 15px 48px;
-    }
-
-    &:hover {
-      background: #1c4386;
-      color: #fff;
-    }
-  }
-
-  &--medium {
-    padding: 9px 22px;
-    text-transform: uppercase;
-    font-size: 14px;
-
-    @media #{$m-tablet} {
-      padding: 10px 22px;
-      font-size: 16px;
-    }
-
-    @media #{$m-desktop} {
-      padding: 11px 22px;
-      font-size: 18px;
-    }
-  }
-
-  &--wide {
-    padding: 10px 24px;
-    text-transform: uppercase;
-    line-height: 1em;
-    letter-spacing: 2.7px;
-    font-size: 8px;
-
-    @media #{$m-tablet} {
-      padding: 14px 36px;
-      font-size: 12px;
-    }
-
-    @media #{$m-desktop} {
-      padding: 18px 48px;
-      font-size: 16px;
-    }
-
-    &#{$this}--big {
-      padding: 12px 24px;
-
-      @media #{$m-tablet} {
-        padding: 15px 36px;
-      }
-
-      @media #{$m-desktop} {
-        padding: 20px 48px;
-      }
-    }
-  }
-  &--arrow {
-    padding-right: 100px;
-  }
-
-  &__icon {
-    position: absolute;
-    right: 22px;
-
-    @media #{$m-tablet} {
-      right: 32px;
-    }
-
-    @media #{$m-desktop} {
-      right: 43px;
-    }
-  }
-
-  &--color-yellow {
-    background: #ffde49;
-    color: #000;
-
-    &:hover {
-      background: #ffd100;
-      color: #000;
-    }
-  }
-
-  &--color-blue {
-    background: #1fa3df;
-    color: #fff;
-
-    &:hover {
-      background: #1382b5;
-      color: #fff;
-    }
-  }
-}
-
 @mixin button() {
   line-height: 20px;
   padding: 9px 15px 7px 15px;
@@ -185,6 +26,17 @@
     padding: 5px 15px 3px 15px;
     font-size: 12px;
     letter-spacing: 0.01em;
+  }
+
+  &--small-to-big {
+    padding: 5px 15px 3px 15px;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+
+    @media #{$m-tablet} {
+      padding: 16px 30px 14px 30px;
+      font-size: 16px;
+    }
   }
 
   &--big {
@@ -218,12 +70,6 @@
 .sl-ca {
   @include button();
   background: #ffde49;
-
-  &--small {
-  }
-
-  &--big {
-  }
 
   &:hover {
     background-color: #ffd100;

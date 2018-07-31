@@ -11,6 +11,7 @@ import './content-items/carousel/carousel'
 import './content-items/news/article-body'
 import './components/calendar-item/calendar-item'
 import './components/input-number/input-number'
+import './components/hidden-gallery/hidden-gallery'
 
 $('body').on('click', 'a[href="#"]', e => e.preventDefault())
 
@@ -22,7 +23,6 @@ const $allVideos = $(
 const $fluidEl = $('figure')
 
 $allVideos.each(function() {
-  console.log('on video loop')
   $(this)
     // jQuery .data does not work on object/embed elements
     .attr('data-aspectRatio', this.height / this.width)
@@ -32,7 +32,6 @@ $allVideos.each(function() {
 
 $(window)
   .resize(function() {
-    console.log('inside resize')
     const newWidth = $fluidEl.width()
     $allVideos.each(function() {
       const $el = $(this)

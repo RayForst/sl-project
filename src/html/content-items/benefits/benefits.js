@@ -6,6 +6,7 @@ const controller = new ScrollMagic.Controller()
 if ($('#benefits').length) {
   new ScrollMagic.Scene({
     triggerElement: '#benefits',
+    offset: -200,
   })
     .addTo(controller) // assign the scene to the controller
     .on('enter', () => {
@@ -44,7 +45,7 @@ $('.tooltip').tooltipster({
         newPosition.coord.left -= 107
         $(helper.tooltip).addClass('tooltipster-arrow-right')
       } else {
-       newPosition.coord.left += 108
+        newPosition.coord.left += 108
       }
     } else {
       newPosition.coord.top -= 8
@@ -54,7 +55,7 @@ $('.tooltip').tooltipster({
   },
 })
 
-$.tooltipster.on('created', event => {
+$.tooltipster.on('created', (event) => {
   const elem = $(event.origin)
 
   $('.tooltip-open').removeClass('tooltip-open')

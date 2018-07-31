@@ -14,8 +14,6 @@ const close = (trigger) => {
 
 const toggleMenu = (e) => {
   const trigger = $(e.currentTarget)
-
-  console.log('toggle')
   return trigger.hasClass('is-active') ? close(trigger) : open(trigger)
 }
 
