@@ -27,6 +27,10 @@ body {
 
 .content {
   flex: 1;
+
+  &--dark {
+    background: #efefef;
+  }
 }
 
 .center {
@@ -78,6 +82,7 @@ body {
 @import "components/dropdown/_dropdown";
 @import "components/calendar-item/_calendar-item";
 @import "components/hidden-gallery/_hidden-gallery";
+@import "components/voucher/_voucher";
 
 @import "content-items/header/_header";
 @import "content-items/hero/_hero";

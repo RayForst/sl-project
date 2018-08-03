@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include "content-items/meta/_meta.twig" %}
+        <title>
+            PDF - Smile-line
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #fff;
+                font-size: 16px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                min-width: 320px;
+                margin: 0;
+                padding-top: 8px;
+            }
+
+            table {
+                width: 595px;
+                padding-left: 74px;
+                box-sizing: border-box;
+            }
+
+            table.details {
+                font-family: Arial;
+                font-size: 10px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #1c4386;
+                padding-top: 0;
+                padding-bottom: 30px;
+            }
+
+            table.details td:last-child {
+                color: #000;
+            }
+
+            table.details tr:not(:last-child) td {
+                padding-bottom: 4px;
+            }
+
+            .voucher-td span {
+                display: block;
+            }
+
+            .voucher-td .title {
+                margin-bottom: 2px;
+            }
+
+            .voucher-td .number {
+                font-size: 10px;
+            }
+
+            .table-heading {
+                color: #fff;
+                background-image: url("/img/components/voucher/plashka.png");
+                padding-top: 36px;
+                padding-bottom: 40px;
+            }
+
+            .welcome-text {
+                font-family: Arial;
+                font-size: 10px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #9b9b9b;
+                padding-bottom: 40px;
+            }
+
+            .contact-info {
+                font-family: Arial;
+                font-size: 11.2px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: 0.1px;
+                color: #9b9b9b;
+                padding-bottom: 20px;
+            }
+
+            .date {
+                font-family: Arial;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #000000;
+            }
+
+            .totals .price {
+                border-bottom: 1px solid #ffde49;
+                padding-bottom: 2px;
+            }
+
+            .totals .total {
+                padding-top: 6px;
+                padding-bottom: 15px;
+            }
+
+            .totals .info {
+                padding-bottom: 15px;
+            }
+
+            .totals .more-info {
+                font-family: Arial;
+                font-size: 10px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #2e2f2c;
+                padding-bottom: 12px;
+            }
+
+            .totals .terms div:first-child {
+                font-family: Arial;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #2e2f2c;
+                padding-bottom: 4px;
+            }
+
+            .totals .terms div:last-child {
+                font-family: Arial;
+                font-size: 8px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.25em;
+                letter-spacing: normal;
+                color: #797a76;
+                max-width: 330px;
+            }
+
+            .totals .terms {
+                padding-bottom: 40px;
+                border-bottom: 1px solid rgba(255,222,73, 0.3);
+            }
+
+            .totals .contacts-info {
+                font-family: Arial;
+                font-size: 12px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #9b9b9b;
+                padding-top: 15px;
+                padding-bottom: 60px;
+            }
+
+            .totals .contacts-info div {
+                padding-bottom: 2px;
+            }
+
+            .contacts-details {
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="table-heading">
+            <tr>
+                <td class="voucher-td">
+                    <span class="title">Voucher</span>
+                    <span class="number">Reservation number: EKS-0001</span>
+                </td>
+                <td>
+                    <span>circle</span>
+                </td>
+            </tr>
+        </table>
+
+        <table class="details">
+            <tr>
+                <td>Name, Last name:</td>
+                <td>Antete Kazelnika</td>
+            </tr>
+            <tr>
+                <td>Reservation number:</td>
+                <td>EKS-2270</td>
+            </tr>
+            <tr>
+                <td>Tour:</td>
+                <td>Tour around Old Town</td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td>22.06.2018</td>
+            </tr>
+            <tr>
+                <td>Starting time:</td>
+                <td>10:30</td>
+            </tr>
+            <tr>
+                <td>Starting place:</td>
+                <td>Town Hall squere</td>
+            </tr>
+            <tr>
+                <td>Tour is provided by:</td>
+                <td>Smile Line</td>
+            </tr>
+            <tr>
+                <td>Sum:</td>
+                <td>12.00 EUR</td>
+            </tr>
+        </table>
+
+        <table class="totals">
+            <tr>
+                <td class="price">
+                    <b>Price:</b>
+                    1 x 12.00 EUR</td>
+            </tr>
+            <tr>
+                <td class="total">
+                    <b>Total:</b>
+                    1</td>
+            </tr>
+            <tr>
+                <td class="info">
+                    <b>Info:</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="more-info">More information available at the Smile line office in Ratslaukums 7.</td>
+            </tr>
+            <tr>
+                <td class="terms">
+                    <div>Terms and conditions</div>
+                    <div>After booking a tour at Smile line, canceling and/or changing the purchase is not possible. The service can be redeemed only on the date and time as speci˛ed in the voucher.</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="contacts-info">
+                    <div>
+                        <b>For any follow-up questions please contact:</b>
+                        info@smileline.lv</div>
+                    <div>
+                        <b>Call:</b>
+                        +371 29 542 626</div>
+                </td>
+            </tr>
+        </table>
+
+        <table class="contacts">
+            <tr>
+                <td class="contacts-details">
+                    <div class="welcome-text">
+                        Welcome Riga with Smile!<br>smileline.lv
+                    </div>
+
+                    <div class="contact-info">
+                        www.smileline.lv<br>
+                        Guide agensy Smie line<br>
+                        Ratslaukums7,Riga,LV-1050<br>
+                        VAT number 40003947891
+                    </div>
+
+                    <div class="date">
+                        22.06.2018<br>
+                        12:00:05
+                    </div>
+
+                    <div class="stamp">
+                        <img src="/img/components/voucher/stamp.png" alt="Stamp">
+                    </div>
+                </td>
+                <td valign="top">
+                    <img src="/img/components/voucher/image-placeholder.jpeg" alt="">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

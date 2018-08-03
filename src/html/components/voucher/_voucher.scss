@@ -1,0 +1,142 @@
+.voucher {
+  background: bisque;
+}
+
+$paddingLeftMob: 20px;
+$paddingLeft: 62px;
+
+.web-voucher {
+  &__content {
+    padding-top: 20px;
+    max-width: 864px;
+    margin: 20px auto 30px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.11);
+
+    @media #{$m-tablet} {
+      padding-top: 46px;
+      margin: 33px auto 60px auto;
+    }
+  }
+
+  &__details {
+    margin-top: 45px;
+    font-size: 16px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+    padding: 0 $paddingLeftMob 30px $paddingLeftMob;
+    width: 100%;
+
+    @media #{$m-tablet} {
+      padding: 0 $paddingLeft 72px $paddingLeft;
+      width: calc(50% + 124px);
+    }
+  }
+
+  &__details-list {
+    margin: 0 0 35px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__detail {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__detail-title {
+    font-weight: bold;
+    color: #1c4386;
+    width: 50%;
+    display: inline-flex;
+    padding-right: 5%;
+
+    &--dark {
+      color: #2e2f2c;
+    }
+  }
+
+  &__detail-val {
+  }
+
+  &__summ {
+  }
+
+  &__summ-item {
+    &:not(:last-child) {
+      border-bottom: 1px solid #ffde49;
+      padding-bottom: 13px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__stamp {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+
+    @media #{$m-tablet} {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.web-voucher-heading {
+  background-color: #1c4386;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $paddingLeftMob 0 $paddingLeftMob;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 15px;
+
+  @media #{$m-tablet} {
+    flex-direction: row;
+    text-align: left;
+    padding: 0 $paddingLeft 0 $paddingLeft;
+    padding-bottom: 0;
+  }
+
+  &__title-wrap {
+    padding: 11px 0 13px 0;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 1px;
+  }
+
+  &__id {
+    font-size: 14px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+
+    @media #{$m-tablet} {
+      flex-direction: row;
+    }
+
+    .sl-ca:last-child {
+      margin-top: 10px;
+
+      @media #{$m-tablet} {
+        margin-left: 27px;
+        margin-top: 0;
+      }
+    }
+  }
+}
