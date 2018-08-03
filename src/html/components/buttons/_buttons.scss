@@ -3,7 +3,6 @@
   padding: 9px 15px 7px 15px;
   border-radius: 30px;
   text-decoration: none;
-  text-transform: uppercase;
   color: #000000;
   font-weight: bold;
   letter-spacing: 0.02em;
@@ -17,6 +16,13 @@
   display: inline-flex;
   justify-content: space-between;
 
+  svg path {
+    transition: fill 0.4s ease;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
   &__icon {
     display: inline-flex;
     align-items: center;
@@ -82,6 +88,19 @@
     &:hover {
       color: #fff;
       background-color: #ff8f00;
+    }
+  }
+
+  &--c-white {
+    color: #1c4386;
+    background: #fff;
+    &:hover {
+      color: #fff;
+      background-color: #1c4386;
+
+      svg path {
+        fill: #fff;
+      }
     }
   }
 }

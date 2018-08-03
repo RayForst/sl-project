@@ -1,5 +1,9 @@
 {% extends "_layout.twig" %}
 
+{% block contentMod %}
+    content--dark
+{% endblock %}
+
 {% block title %}UI -
     {{ parent() }}
 {% endblock %}
@@ -29,6 +33,10 @@
                 <li>
                     <a href="/contacts.html">Contacts</a>
                 </li>
+
+                <li>
+                    <a href="/voucher.html">Voucher</a>
+                </li>
             </ul>
         </div>
 
@@ -49,6 +57,10 @@
                         <a href="#" class="sl-ca sl-ca--c-orange sl-ca--small">Small button</a>
                         <a href="#" class="sl-ca sl-ca--c-orange">Regular button</a>
                         <a href="#" class="sl-ca sl-ca--c-orange sl-ca--big">Big button</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="sl-ca sl-ca--small sl-ca--c-white"><img src="/img/components/buttons/pdf.svg" alt="">Small button</a>
                     </div>
                 </div>
 
