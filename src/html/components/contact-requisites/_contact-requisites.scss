@@ -27,7 +27,8 @@
   &__link {
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    flex-direction: column;
     white-space: nowrap;
     transition: color 0.4s ease;
 
@@ -99,12 +100,12 @@
     @media #{$m_tablet} {
       #{$that}__icon {
         display: flex;
-        margin-right: auto;
-        margin-bottom: 10px;
+        // margin-right: auto;
+        // margin-bottom: 10px;
       }
 
       #{$that}__link {
-        display: inline-block;
+        flex-direction: row;
       }
 
       #{$that}__link-wrapper {
@@ -112,7 +113,7 @@
       }
     }
 
-    @media #{$m_desktop} {
+    @media #{$m-desktop-18} {
       display: flex;
       width: 100%;
       justify-content: space-between;
@@ -136,6 +137,11 @@
   }
 
   &--footer {
+    #{$that}__link {
+      @media #{$m_tablet} {
+        flex-direction: row;
+      }
+    }
     @media #{$m_desktop} {
       flex-direction: column;
     }

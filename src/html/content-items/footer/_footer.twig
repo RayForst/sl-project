@@ -12,40 +12,40 @@
         <div class="footer__requisites">
             {% include "components/contact-requisites/_contact-requisites.twig" with { mod: ' contact-requisites--footer' } only %}
         </div>
-      
-            {% include "components/navigation/_navigation.twig" with {
-                mod: ' footer__navigation',
-                data : [
-                    [
-                        {
-                            name: 'News',
-                            link: '#'
-                        }, {
-                            name: 'Regular Tours',
-                            link: '#'
-                        }, {
-                            name: 'Riga Tours',
-                            link: '#'
-                        }, {
-                            name: 'Outside Riga Tours',
-                            link: '#'
-                        }
-                    ],
-                    [
-                        {
-                            name: 'About us',
-                            link: '#'
-                        }, {
-                            name: 'Tripadviser reviews',
-                            link: '#'
-                        }, {
-                            name: 'Outside Riga Tours',
-                            link: '#'
-                        }
-                    ]
+
+        {% include "components/navigation/_navigation.twig" with {
+            mod : ' footer__navigation',
+            data: [
+                [
+                    {
+                        name: 'News',
+                        link: '#'
+                    }, {
+                        name: 'Regular Tours',
+                        link: '#'
+                    }, {
+                        name: 'Riga Tours',
+                        link: '#'
+                    }, {
+                        name: 'Outside Riga Tours',
+                        link: '#'
+                    }
+                ],
+                [
+                    {
+                        name: 'About us',
+                        link: '#'
+                    }, {
+                        name: 'Tripadviser reviews',
+                        link: '#'
+                    }, {
+                        name: 'Outside Riga Tours',
+                        link: '#'
+                    }
                 ]
-            } only %}
-  
+            ]
+        }
+        only %}
 
     </div>
     <div class="center footer__partners">

@@ -14,6 +14,7 @@ module.exports = function(gulp, plugins, options) {
   ]
 
   if (options.isProd) {
+    console.log('production')
     webpackPlugins.push(
       new UglifyJsPlugin({
         sourceMap: false,

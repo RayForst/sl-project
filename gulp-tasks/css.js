@@ -13,7 +13,7 @@ module.exports = function(gulp, plugins, options) {
         ],
       }),
       plugins.if(!options.isProd, plugins.sourcemaps.write()),
-      plugins.if(options.isProd, plugins.autoprefixer(['> 1%'], { cascade: false })),
+      plugins.if(options.isProd, plugins.autoprefixer()),
       plugins.if(
         options.isProd,
         plugins.cssnano({ zindex: false, minifyFontValues: false, discardUnused: false }),

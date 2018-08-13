@@ -57,7 +57,15 @@
   }
 
   &--header {
-    @media #{$m_desktop} {
+    #{$that}__link {
+      @media #{$m_desktop} {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.56em;
+      }
+    }
+
+    @media #{$m-desktop-18} {
       width: 100%;
       @include breakpadding();
       #{$that}__list {

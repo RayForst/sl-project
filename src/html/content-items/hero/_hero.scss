@@ -15,6 +15,7 @@
       height: 100%;
       opacity: 0;
       transition: transform 0.5s ease-out 400ms, opacity 0.5s ease-out 400ms;
+      position: relative;
     }
 
     &-active {
@@ -84,10 +85,17 @@
     }
 
     &--no-button {
-      height: 200px;
+      height: 270px;
 
       @media #{$m_tablet} {
         height: 400px;
+      }
+
+      #{$this}__title {
+        padding-top: 80px;
+        @media #{$m_tablet} {
+          padding-top: 130px;
+        }
       }
     }
 
@@ -142,22 +150,13 @@
       display: flex;
       flex-direction: column;
 
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
 
       @media #{$m_tablet} {
         justify-content: flex-start;
         align-items: flex-start;
       }
-    }
-  }
-
-  &__button {
-    position: absolute;
-    bottom: 53px;
-
-    @media #{$m_tablet} {
-      bottom: 112px;
     }
   }
 
@@ -193,7 +192,7 @@
     color: #ffffff;
     margin: 0;
     padding: {
-      top: 70px;
+      top: 0px;
       bottom: 6px;
     }
 
@@ -206,9 +205,16 @@
       color: #ffffff;
 
       padding: {
-        top: 150px;
-        bottom: 21px;
+        top: 100px;
+        bottom: 30px;
       }
+    }
+  }
+
+  &__button {
+    @media #{$m_tablet} {
+      position: absolute;
+      bottom: 110px;
     }
   }
 
@@ -219,14 +225,19 @@
     color: #ffffff;
     margin: 0;
     padding: 0 10%;
+    margin-bottom: 10px;
 
     @media #{$m_tablet} {
       font-size: 22px;
       line-height: 1.05em;
       text-align: left;
-      max-width: 50%;
+      max-width: 70%;
       margin-bottom: 70px;
       padding: 0;
+    }
+
+    @media #{$m-desktop} {
+      max-width: 50%;
     }
   }
 
@@ -236,7 +247,7 @@
     height: 20px;
     width: 100%;
     left: 0;
-    bottom: 10px;
+    bottom: 15px;
 
     & > .center {
       display: flex;
@@ -297,7 +308,7 @@
   .swiper-container-rtl .swiper-butt on-next,
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
-    background-image: url("/img/content-items/social/instagram/right-small.svg");
+    background-image: url("/img/content-items/social/instagram/right-small-white.svg");
     width: 34px;
     height: 34px;
     background-size: auto;

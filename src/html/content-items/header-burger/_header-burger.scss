@@ -26,12 +26,12 @@ $hamburger-layer-spacing: 3px;
     transition: transform 0.4s ease;
     transform: translateX(100%);
     overflow: auto;
-
+    transition-duration: 0.6s;
+    z-index: 1000;
+    min-width: 320px;
     &--open {
       right: 0;
-      z-index: 1000;
       transform: translateX(0);
-      transition-duration: 0.6s;
     }
 
     &__background {
@@ -66,7 +66,7 @@ $hamburger-layer-spacing: 3px;
     padding-top: 70px;
   }
 
-  @media #{$m_desktop} {
+  @media #{$m-desktop-18} {
     width: 100%;
     position: relative;
     padding-left: 270px;
@@ -75,7 +75,7 @@ $hamburger-layer-spacing: 3px;
   }
 
   &__achievements {
-    @media #{$m_desktop} {
+    @media #{$m-desktop-18} {
       order: 0;
       position: absolute;
       left: 0;
@@ -88,7 +88,7 @@ $hamburger-layer-spacing: 3px;
   }
 
   &__contacts {
-    @media #{$m_desktop} {
+    @media #{$m-desktop-18} {
       order: 1;
       width: 100%;
       margin-right: 176px;
@@ -100,7 +100,7 @@ $hamburger-layer-spacing: 3px;
   }
 
   &__navigation {
-    @media #{$m_desktop} {
+    @media #{$m-desktop-18} {
       order: 2;
       flex-basis: 100%;
       height: 50%;
@@ -112,7 +112,7 @@ $hamburger-layer-spacing: 3px;
   }
 
   &__background {
-    @media #{$m_desktop} {
+    @media #{$m-desktop-18} {
       display: flex;
       width: 100%;
       flex-wrap: wrap;

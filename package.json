@@ -5,7 +5,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "gulp --watch",
+    "start": "gulp --watch --env=prod",
     "build": "gulp build --env=prod"
   },
   "dependencies": {

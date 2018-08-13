@@ -94,27 +94,25 @@
                             <div class="hero__slide">
                                 <div class="hero__slide-content">
                                     <div class="center">
-                                        <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
-                                        <a href="#" class="sl-ca sl-ca--big">Uzzināt vairāk</a>
+                                        <h1 class="hero__title">
+                                            {% if i % 2 == 0 %}
+                                                Long long title Walking tour Old Town
+                                            {% else %}
+                                                Walking tour Old Town
+                                            {% endif %}
+                                        </h1>
+                                        <p class="hero__description">
+                                            {% if i % 2 == 0 %}
+                                                Long long Old Town, Long long Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities, Wooden architecture and activities
+                                            {% else %}
+                                                Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities
+                                            {% endif %}
+                                        </p>
+                                        <a href="#" class="hero__button sl-ca sl-ca--big">Uzzināt vairāk</a>
                                     </div>
                                 </div>
 
-                                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img.jpg');"></span>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="hero__slide">
-                                <div class="hero__slide-content">
-                                    <div class="center">
-                                        <h1 class="hero__title">Walking tours in Old Riga</h1>
-                                        <p class="hero__description">Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities</p>
-                                        <a href="#" class="sl-ca sl-ca--big">Uzzināt vairāk</a>
-                                    </div>
-                                </div>
-
-                                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img2.jpg');"></span>
+                                <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img{% if i % 2 == 0 %}2{% endif %}.jpg');"></span>
                             </div>
                         </div>
                     {% endfor %}
@@ -124,6 +122,26 @@
                 <div class="hero__pagination">
                     <div class="center">
                         <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        {% elseif noswiper is defined and slideMod == 'empty' %}
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero__slide">
+                            <div class="hero__slide-content">
+                                <div class="center">
+                                    <h1 class="hero__title">Walking tour Old Town</h1>
+                                    <p class="hero__description">
+                                        Old Town, culinary tour, Ring of Boulevards and Art Nouveau district, Soviet Riga, Wooden architecture and activities
+                                    </p>
+                                    <a href="#" class="hero__button sl-ca sl-ca--big">Uzzināt vairāk</a>
+                                </div>
+                            </div>
+
+                            <span class="hero__slide-image" style="background-image: url('/img/content-items/hero/img2.jpg');"></span>
+                        </div>
                     </div>
                 </div>
             </div>

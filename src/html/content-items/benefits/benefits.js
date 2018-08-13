@@ -42,7 +42,7 @@ $('.tooltip').tooltipster({
       newPosition.coord.top -= 17
 
       if (hasSpaceInRight) {
-        newPosition.coord.left -= 107
+        newPosition.coord.left -= 96
         $(helper.tooltip).addClass('tooltipster-arrow-right')
       } else {
         newPosition.coord.left += 108

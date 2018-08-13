@@ -2,14 +2,27 @@
   background: #fff;
   padding: 10px 0;
   position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 32;
+  width: 100%;
+  min-width: 320px;
+  box-shadow: 0 0 40px 0 rgba(5, 22, 50, 0.24);
 
   & > .center {
     position: relative;
     align-items: center;
   }
 
-  @media #{$m_desktop} {
+  @media #{$m-desktop-18} {
     padding: 0;
+    position: initial;
+    box-shadow: none;
+  }
+
+  @media (max-width: 1440px) and (orientation: landscape) {
+    position: initial;
   }
 
   &__language {
@@ -19,7 +32,7 @@
     top: auto;
     display: inline-flex;
 
-    @media #{$m_desktop} {
+    @media #{$m-desktop-18} {
       top: 0;
       left: auto;
       right: 60px;
