@@ -124,3 +124,63 @@
     color: #fff;
   }
 }
+
+.sl-button {
+  border-radius: 35px;
+  background-color: #f5a623;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-align: left;
+  color: #ffffff;
+  border: none;
+  padding: 13px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  line-height: 1.25em;
+  min-width: 135px;
+  justify-content: center;
+  transition: background 0.4s ease, color 0.4s ease;
+
+  $this: &;
+
+  @media #{$m-tablet} {
+    padding: 16px 32px;
+    font-size: 17px;
+  }
+
+  @media #{$m-desktop} {
+    font-size: 20px;
+    padding: 20px 43px;
+  }
+
+  &:hover {
+    background: #ffde49;
+    color: #000;
+  }
+
+  &--small {
+    padding: {
+      top: 9px;
+      bottom: 7px;
+      left: 15px;
+      right: 15px;
+    }
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    min-width: 108px;
+  }
+
+  &--color-blue {
+    background: #1fa3df;
+    color: #fff;
+
+    &:hover {
+      background: #1382b5;
+      color: #fff;
+    }
+  }
+}
